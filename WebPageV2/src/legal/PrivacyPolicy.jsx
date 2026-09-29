@@ -64,8 +64,8 @@ export default function PrivacyPolicy() {
         <List
           items={[
             <>
-              <strong>FormSubmit</strong> — delivers contact-form submissions to our mailbox (
-              <A href="https://formsubmit.co/privacy-policy">privacy policy</A>).
+              <strong>Web3Forms</strong> — delivers contact-form submissions to our mailbox (
+              <A href="https://web3forms.com/privacy">privacy policy</A>).
             </>,
             <><strong>Our email provider</strong> — hosts the info@syfinor.com mailbox where enquiries are received and stored.</>,
             <>

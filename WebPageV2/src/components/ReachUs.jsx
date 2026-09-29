@@ -14,9 +14,10 @@ import {
 } from 'lucide-react';
 
 // Official Syfinor Technologies company URLs
-// Contact form delivery (FormSubmit.co AJAX endpoint -> info@syfinor.com).
-// After activation, the address can be replaced by the random alias FormSubmit emails you.
-const CONTACT_FORM_ENDPOINT = 'https://formsubmit.co/ajax/info@syfinor.com';
+// Contact form delivery via Web3Forms (https://web3forms.com) -> info@syfinor.com.
+// Paste the Access Key emailed by Web3Forms to info@syfinor.com here, then run `npm run publish:site`.
+const WEB3FORMS_ACCESS_KEY = '505fafcb-8133-4e82-87a5-463e8c064825';
+const CONTACT_FORM_ENDPOINT = 'https://api.web3forms.com/submit';
 
 const SYFINOR_LINKEDIN_URL = 'https://www.linkedin.com/company/syfinor-technologies/posts/?feedView=all';
 
@@ -51,19 +52,19 @@ export default function ReachUs() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Website enquiry: ${formData.enquiryType || 'General'} - ${fullName}`,
+          from_name: 'Syfinor Website',
+          replyto: formData.email,
           Name: fullName,
           Email: formData.email,
           Organization: formData.organization || '-',
           'Enquiry Type': formData.enquiryType || 'General',
           Message: formData.message || '-',
-          _replyto: formData.email,
-          _subject: `Website enquiry: ${formData.enquiryType || 'General'} - ${fullName}`,
-          _template: 'table',
-          _captcha: 'false',
         }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok || String(data.success) !== 'true') {
+      if (!res.ok || data.success !== true) {
         throw new Error(data.message || `HTTP ${res.status}`);
       }
       setSubmitted(true);
