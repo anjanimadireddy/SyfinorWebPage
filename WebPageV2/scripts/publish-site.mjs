@@ -40,8 +40,10 @@ for (const f of ['MaheshVemani.png', 'VenkataAnjaniPhoto.jpg', 'syfinor-logo.png
 }
 fs.writeFileSync(path.join(dist, '.nojekyll'), '');
 
-// Replace the previously published files at the repo root.
-fs.rmSync(path.join(root, 'assets'), { recursive: true, force: true });
+// Copy the new build to the repo root. Old files in root assets/ are deliberately KEPT:
+// browsers and GitHub's CDN can cache index.html for ~10 minutes after a release, and a cached
+// page still points at the previous build's file names. Deleting them caused a blank page for
+// those visitors. Asset files are small, so leaving older ones in place is harmless.
 for (const f of fs.readdirSync(dist)) {
   fs.cpSync(path.join(dist, f), path.join(root, f), { recursive: true });
 }
