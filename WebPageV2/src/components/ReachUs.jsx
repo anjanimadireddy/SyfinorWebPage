@@ -79,14 +79,19 @@ export default function ReachUs() {
 
   const contactCards = [
     {
-      title: 'OFFICE ADDRESS',
+      title: 'OFFICE ADDRESSES',
       icon: MapPin,
       content: (
         <div className="text-[13px] text-[#3D5070] leading-relaxed">
           <p className="font-semibold text-[#1A2742]">Syfinor Technologies Private Limited</p>
+          <p className="mt-2 text-[11.5px] font-bold tracking-wider text-[#00A39B] uppercase">Bangalore</p>
           <p>B4-1005, BDA Chandragiri PH-2,</p>
           <p>Bidare Agrahara, Kadugodi Extension,</p>
           <p>Bangalore – 560067, Karnataka, India</p>
+          <p className="mt-2.5 text-[11.5px] font-bold tracking-wider text-[#00A39B] uppercase">Hyderabad</p>
+          <p>8GW9+PRM, Vaishali Nagar Rd,</p>
+          <p>Vaishali Nagar, Champapet,</p>
+          <p>Hyderabad – 500079, Telangana, India</p>
         </div>
       ),
     },
@@ -362,6 +367,14 @@ export default function ReachUs() {
                     <Send className="w-4 h-4" />
                     <span>{sending ? 'Sending…' : 'Send Message →'}</span>
                   </button>
+
+                  <p className="text-[12px] text-[#56657A] text-center leading-relaxed">
+                    By submitting this form, you agree to our{' '}
+                    <a href="/privacy/" target="_blank" rel="noopener" className="text-[#00A39B] font-semibold underline underline-offset-2 hover:text-[#00B89F]">
+                      Privacy Policy
+                    </a>
+                    .
+                  </p>
                 </form>
               )}
             </div>

@@ -6,6 +6,16 @@ import {defineConfig} from 'vite';
 export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
+    build: {
+      rollupOptions: {
+        // Multi-page site: home + legal pages (served at /privacy/ and /terms/).
+        input: {
+          main: path.resolve(__dirname, 'index.html'),
+          privacy: path.resolve(__dirname, 'privacy/index.html'),
+          terms: path.resolve(__dirname, 'terms/index.html'),
+        },
+      },
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),

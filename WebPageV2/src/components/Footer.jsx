@@ -1,6 +1,6 @@
 import React from 'react';
 import OracleBadge from './OracleBadge.jsx';
-import { Globe, Linkedin } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 import syfinorLogoWhite from '../assets/images/syfinor-logo-white.png';
 
 export default function Footer() {
@@ -38,13 +38,6 @@ export default function Footer() {
             >
               <Linkedin className="w-4 h-4" />
             </a>
-            <a
-              href="#"
-              className="w-9 h-9 rounded-lg bg-[#1A2742] border border-[#2E4266] flex items-center justify-center text-[#8A9AB2] hover:text-[#00B89F] hover:border-[#00B89F] transition-all"
-              aria-label="Website"
-            >
-              <Globe className="w-4 h-4" />
-            </a>
           </div>
         </div>
 
@@ -56,13 +49,13 @@ export default function Footer() {
               COMPANY
             </span>
             <div className="flex items-center gap-4 text-[#93A3BA]">
-              <a href="#about" className="hover:text-white transition-colors">
+              <a href="/#about" className="hover:text-white transition-colors">
                 Mission & Vision
               </a>
-              <a href="#global-reach" className="hover:text-white transition-colors">
+              <a href="/#global-reach" className="hover:text-white transition-colors">
                 Global Reach
               </a>
-              <a href="#leadership" className="hover:text-white transition-colors">
+              <a href="/#leadership" className="hover:text-white transition-colors">
                 Leadership
               </a>
             </div>
@@ -74,13 +67,13 @@ export default function Footer() {
               PLATFORM
             </span>
             <div className="flex items-center gap-4 text-[#93A3BA]">
-              <a href="#products" className="hover:text-white transition-colors">
+              <a href="/#products" className="hover:text-white transition-colors">
                 Products
               </a>
-              <a href="#services" className="hover:text-white transition-colors">
+              <a href="/#services" className="hover:text-white transition-colors">
                 Services
               </a>
-              <a href="#support" className="hover:text-white transition-colors">
+              <a href="/#support" className="hover:text-white transition-colors">
                 Support
               </a>
             </div>
@@ -92,24 +85,18 @@ export default function Footer() {
               LEGAL
             </span>
             <div className="flex items-center gap-4 text-[#93A3BA]">
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="/privacy/" className="hover:text-white transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Cookie Policy
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Compliance
+              <a href="/terms/" className="hover:text-white transition-colors">
+                Terms of Use
               </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Tier: Copyright & Tagline */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[12px] text-[#7198A9]">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[12px] text-[#8A9AB2]">
           <p>© {new Date().getFullYear()} Syfinor Technologies Private Limited. All rights reserved.</p>
           <p className="mt-2 sm:mt-0 font-medium text-[#00B89F]/80">
             | Crafted with precision.

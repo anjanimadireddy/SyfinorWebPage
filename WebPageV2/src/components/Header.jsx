@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import syfinorLogo from '../assets/images/syfinor-logo-header.png';
 
-export default function Header() {
+// base = '' on the home page, '/' on other pages (privacy, terms) so links go back to the home sections.
+export default function Header({ base = '' }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
@@ -51,12 +52,12 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Products', href: '#products' },
-    { name: 'Services', href: '#services' },
-    { name: 'Partners', href: '#partners' },
-    { name: 'Support', href: '#support' },
-    { name: 'Leadership', href: '#leadership' },
+    { name: 'About', id: 'about' },
+    { name: 'Products', id: 'products' },
+    { name: 'Services', id: 'services' },
+    { name: 'Partners', id: 'partners' },
+    { name: 'Support', id: 'support' },
+    { name: 'Leadership', id: 'leadership' },
   ];
 
   return (
@@ -69,7 +70,7 @@ export default function Header() {
 
         {/* Logo — Far Left */}
         <div className="flex-shrink-0 flex items-center gap-3.5 xl:gap-4">
-          <a href="#" className="flex items-center" aria-label="Syfinor home">
+          <a href={base || '#'} className="flex items-center" aria-label="Syfinor home">
             <img
               src={syfinorLogo}
               alt="Syfinor"
@@ -81,11 +82,11 @@ export default function Header() {
         {/* Nav links + Contact — Far Right, grouped together */}
         <div className="hidden lg:flex items-center gap-5 xl:gap-6 2xl:gap-10">
           {navLinks.map((link) => {
-            const isActive = activeSection === link.href.substring(1);
+            const isActive = activeSection === link.id;
             return (
               <a
                 key={link.name}
-                href={link.href}
+                href={`${base}#${link.id}`}
                 className={`group relative text-[15.5px] lg:text-[16.5px] 2xl:text-[17.2px] font-medium whitespace-nowrap transition-colors duration-200 py-1 ${
                   isActive
                     ? 'text-[#00B89F] font-semibold'
@@ -104,7 +105,7 @@ export default function Header() {
 
           {/* Contact Button — Pill with Teal-Cyan Gradient & Arrow */}
           <a
-            href="#contact"
+            href={`${base}#contact`}
             className="inline-flex items-center justify-center gap-2.5 h-[44px] px-6 sm:px-7 rounded-full text-[15px] font-medium text-white whitespace-nowrap flex-shrink-0 bg-gradient-to-r from-[#00A396] via-[#00B89F] to-[#00C9BC] hover:from-[#00B3A4] hover:via-[#00C4AA] hover:to-[#00D9CC] shadow-[0_4px_16px_rgba(0,184,159,0.30)] hover:shadow-[0_6px_22px_rgba(0,184,159,0.46)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-300 ease-out"
           >
             <span>Contact</span>
@@ -128,7 +129,7 @@ export default function Header() {
           {navLinks.map((link) => (
             <a
               key={link.name}
-              href={link.href}
+              href={`${base}#${link.id}`}
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-[15px] font-medium text-[#1A2742] hover:text-[#00B89F] border-b border-slate-100/80"
             >
@@ -137,7 +138,7 @@ export default function Header() {
           ))}
           <div className="pt-2">
             <a
-              href="#contact"
+              href={`${base}#contact`}
               onClick={() => setMobileMenuOpen(false)}
               className="inline-flex items-center justify-center gap-2.5 w-full text-center px-6 py-3 rounded-full text-[15px] font-medium text-white bg-gradient-to-r from-[#00A396] to-[#00C9BC] shadow-[0_3px_12px_rgba(0,184,159,0.25)] transition-all duration-300"
             >
