@@ -1,0 +1,212 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 28s linear infinite;
+  }
+
+  @keyframes capability-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .capability-bar {
+    width: 100%;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: rgba(8, 36, 47, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #154659;
+    border-radius: 12px;
+    height: 52px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(0, 217, 208, 0.18);
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .capability-bar {
+      width: 100%;
+    }
+  }
+
+  .capability-arrow {
+    flex: 0 0 50px;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00D9D0;
+    font-size: 26px;
+    font-weight: 700;
+    z-index: 10;
+    position: relative;
+    background-color: #08242F;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    user-select: none;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+  }
+
+  .capability-arrow:hover {
+    background-color: #0c3647;
+    color: #38ece4;
+  }
+
+  .capability-arrow:active {
+    transform: scale(0.92);
+  }
+
+  .capability-arrow-left {
+    border-right: 1px solid rgba(21, 70, 89, 0.6);
+  }
+
+  .capability-arrow-right {
+    border-left: 1px solid rgba(21, 70, 89, 0.6);
+  }
+
+  .capability-viewport {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .capability-track {
+    display: flex;
+    width: max-content;
+    flex-shrink: 0;
+    will-change: transform;
+  }
+
+  .capability-group {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 70px;
+    padding-right: 70px;
+  }
+
+  @keyframes orbit-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes orbit-spin-reverse {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  .animate-orbit-slow {
+    animation: orbit-spin 52s linear infinite;
+    transform-origin: 300px 300px;
+  }
+
+  .animate-orbit-reverse {
+    animation: orbit-spin-reverse 40s linear infinite;
+    transform-origin: 300px 300px;
+  }
+
+  .animate-orbit-medium {
+    animation: orbit-spin 32s linear infinite;
+    transform-origin: 300px 300px;
+  }
+
+  @keyframes oracle-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes oracle-rotate-reverse {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  .animate-oracle-orbit {
+    animation: oracle-rotate 75s linear infinite;
+    transform-origin: center;
+  }
+
+  .animate-oracle-orbit-reverse {
+    animation: oracle-rotate-reverse 60s linear infinite;
+    transform-origin: center;
+  }
+
+  @keyframes map-dash-anim {
+    to {
+      stroke-dashoffset: -32;
+    }
+  }
+
+  .animate-map-dash {
+    stroke-dasharray: 6 6;
+    animation: map-dash-anim 3.5s linear infinite;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #00B89F;
+  color: #FFFFFF;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0D3240;
+}
+::-webkit-scrollbar-thumb {
+  background: #1B4E61;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00B89F;
+}

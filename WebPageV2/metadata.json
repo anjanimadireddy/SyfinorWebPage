@@ -1,0 +1,6 @@
+{
+  "name": "Syfinor - Intelligent Financial Solutions",
+  "description": "Enterprise fintech and banking technology solutions powered by Oracle FLEXCUBE, infrastructure monitoring, core banking, and managed services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
