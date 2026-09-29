@@ -150,7 +150,7 @@ export default function ReachUs() {
           <p>Bidare Agrahara, Kadugodi Extension,</p>
           <p>Bangalore – 560067, Karnataka, India</p>
           <p className="mt-2.5 text-[11.5px] font-bold tracking-wider text-[#00A39B] uppercase">Hyderabad</p>
-          <p>8GW9+PRM, Vaishali Nagar Rd,</p>
+          <p>Koco Works, Vaishali Nagar Rd,</p>
           <p>Vaishali Nagar, Champapet,</p>
           <p>Hyderabad – 500079, Telangana, India</p>
         </div>
