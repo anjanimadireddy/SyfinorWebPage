@@ -18,3 +18,8 @@ View your app in AI Studio: https://ai.studio/apps/3eb42da9-7533-452d-a08f-c5002
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+
+cd D:\Works\Syfinor\Admin\SyfinorWebPage
+npx serve .
+http://localhost:3000/

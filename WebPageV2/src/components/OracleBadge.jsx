@@ -4,7 +4,7 @@ import oracleLogo from '../assets/images/oracle-logo.svg';
 export default function OracleBadge({ className = '', variant = 'standard' }) {
   return (
     <div
-      className={`inline-flex flex-wrap sm:flex-nowrap items-center gap-2.5 sm:gap-3 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-lg bg-[#0E2737]/60 border border-[#00D9D0]/20 hover:border-[#00D9D0]/35 transition-colors shadow-[0_0_12px_rgba(0,217,208,0.06)] select-none ${className}`}
+      className={`inline-flex flex-wrap sm:flex-nowrap items-center gap-2.5 sm:gap-3 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-lg bg-[#0F1A2E]/60 border border-[#00D9D0]/20 hover:border-[#00D9D0]/35 transition-colors shadow-[0_0_12px_rgba(0,217,208,0.06)] select-none ${className}`}
       aria-label="Oracle Partner - Delivering technology solutions powered by Oracle FLEXCUBE"
     >
       {/* Official Oracle SVG Asset directly on dark background */}
@@ -24,7 +24,7 @@ export default function OracleBadge({ className = '', variant = 'standard' }) {
           Oracle Partner
         </span>
         <span className="hidden xl:inline text-[#00D9D0]/35 select-none">•</span>
-        <span className="text-[9.5px] sm:text-[10px] text-[#86AEBF] leading-tight whitespace-normal">
+        <span className="text-[9.5px] sm:text-[10px] text-[#8A9AB2] leading-tight whitespace-normal">
           Delivering technology solutions powered by Oracle FLEXCUBE
         </span>
       </div>

@@ -49,7 +49,7 @@ export default function OraclePartnership() {
     return (
       <div
         key={item.id}
-        className="relative group w-full bg-[#08222E]/85 backdrop-blur-md border border-[#00D9D0]/30 hover:border-[#00D9D0]/70 rounded-2xl p-5 sm:p-6 transition-all duration-300 shadow-[0_4px_25px_rgba(0,0,0,0.45)] hover:shadow-[0_0_25px_rgba(0,217,208,0.2)] overflow-hidden"
+        className="relative group w-full bg-[#0C1828]/85 backdrop-blur-md border border-[#00D9D0]/30 hover:border-[#00D9D0]/70 rounded-2xl p-5 sm:p-6 transition-all duration-300 shadow-[0_4px_25px_rgba(0,0,0,0.45)] hover:shadow-[0_0_25px_rgba(0,217,208,0.2)] overflow-hidden"
       >
         {/* Angled corner accent matching enterprise reference */}
         <div
@@ -73,8 +73,8 @@ export default function OraclePartnership() {
             referrerPolicy="no-referrer"
           />
           {/* Subtle multi-stop gradient mask so text remains pristine and readable */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#08222E] via-[#08222E]/80 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#08222E]/70 via-transparent to-[#08222E]/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0C1828] via-[#0C1828]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0C1828]/70 via-transparent to-[#0C1828]/40" />
         </div>
 
         {/* Content Container */}
@@ -89,7 +89,7 @@ export default function OraclePartnership() {
               <h3 className="text-[16px] sm:text-[17.5px] font-bold text-white leading-snug tracking-tight">
                 {item.title}
               </h3>
-              <p className="text-[12.5px] sm:text-[13px] text-[#B8CAD3] leading-relaxed mt-1 font-normal">
+              <p className="text-[12.5px] sm:text-[13px] text-[#B7C1D0] leading-relaxed mt-1 font-normal">
                 {item.description}
               </p>
             </div>
@@ -102,7 +102,7 @@ export default function OraclePartnership() {
   return (
     <section
       id="partners"
-      className="bg-[#0E2737] text-white py-16 sm:py-20 lg:py-24 border-b border-[#144254] relative overflow-hidden"
+      className="bg-[#0F1A2E] text-white py-16 sm:py-20 lg:py-24 border-b border-[#243552] relative overflow-hidden"
     >
       {/* 1. Subtle Background Decorations */}
       {/* Central radial glow behind the Oracle center */}
@@ -110,7 +110,7 @@ export default function OraclePartnership() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[750px] rounded-full pointer-events-none"
         style={{
           background:
-            'radial-gradient(circle, rgba(0,217,208,0.12) 0%, rgba(14,39,55,0) 70%)',
+            'radial-gradient(circle, rgba(0,217,208,0.12) 0%, rgba(15,26,46,0) 70%)',
         }}
       />
 
@@ -198,7 +198,7 @@ export default function OraclePartnership() {
           </h2>
 
           {/* Existing Oracle partnership description */}
-          <p className="text-[15px] sm:text-[16px] text-[#B8CAD3] leading-relaxed max-w-2xl mx-auto font-normal">
+          <p className="text-[15px] sm:text-[16px] text-[#B7C1D0] leading-relaxed max-w-2xl mx-auto font-normal">
             Syfinor delivers technology solutions and services around Oracle banking platforms, helping financial institutions implement, integrate, customize and support their core banking environments.
           </p>
         </div>
@@ -286,7 +286,7 @@ export default function OraclePartnership() {
               <div className="absolute inset-14 rounded-full border border-[#00D9D0]/35 pointer-events-none shadow-[0_0_20px_rgba(0,217,208,0.15)]" />
 
               {/* Circular Oracle Technology Hub Centerpiece */}
-              <div className="relative z-10 w-44 h-44 xl:w-48 xl:h-48 rounded-full bg-[#081E2B] border-2 border-[#00D9D0] flex flex-col items-center justify-center p-6 text-center shadow-[0_0_35px_rgba(0,217,208,0.3),inset_0_0_20px_rgba(0,217,208,0.2)]">
+              <div className="relative z-10 w-44 h-44 xl:w-48 xl:h-48 rounded-full bg-[#0C1828] border-2 border-[#00D9D0] flex flex-col items-center justify-center p-6 text-center shadow-[0_0_35px_rgba(0,217,208,0.3),inset_0_0_20px_rgba(0,217,208,0.2)]">
                 {/* Official Oracle SVG Asset */}
                 <img
                   src={oracleLogo}
@@ -316,7 +316,7 @@ export default function OraclePartnership() {
             <div className="absolute inset-5 rounded-full border border-[#00D9D0]/25 border-dashed pointer-events-none" />
 
             {/* Centerpiece circle */}
-            <div className="relative z-10 w-40 h-40 sm:w-44 sm:h-44 rounded-full bg-[#081E2B] border-2 border-[#00D9D0] flex flex-col items-center justify-center p-5 text-center shadow-[0_0_30px_rgba(0,217,208,0.3)]">
+            <div className="relative z-10 w-40 h-40 sm:w-44 sm:h-44 rounded-full bg-[#0C1828] border-2 border-[#00D9D0] flex flex-col items-center justify-center p-5 text-center shadow-[0_0_30px_rgba(0,217,208,0.3)]">
               <img
                 src={oracleLogo}
                 alt="Oracle"
@@ -345,7 +345,7 @@ export default function OraclePartnership() {
           {/* Left CTA Pill Button */}
           <a
             href="#contact"
-            className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-2.5 rounded-full border border-[#00D9D0] bg-[#092230]/70 text-[#00D9D0] text-[13.5px] sm:text-[14px] font-semibold tracking-wide hover:bg-[#00D9D0]/15 hover:shadow-[0_0_20px_rgba(0,217,208,0.35)] transition-all duration-200 active:scale-95 shadow-sm"
+            className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-2.5 rounded-full border border-[#00D9D0] bg-[#131F35]/70 text-[#00D9D0] text-[13.5px] sm:text-[14px] font-semibold tracking-wide hover:bg-[#00D9D0]/15 hover:shadow-[0_0_20px_rgba(0,217,208,0.35)] transition-all duration-200 active:scale-95 shadow-sm"
           >
             <span>Explore Our Oracle Expertise</span>
             <ArrowRight className="w-4 h-4" />
@@ -354,7 +354,7 @@ export default function OraclePartnership() {
           {/* Vertical Divider */}
           <div className="hidden md:block w-[1.5px] h-8 bg-[#00D9D0]/30" />
 
-          {/* Right Oracle Partner Brand Info directly on #0E2737 */}
+          {/* Right Oracle Partner Brand Info directly on #1A2742 */}
           <div className="flex items-center gap-3.5">
             <img
               src={oracleLogo}
@@ -365,7 +365,7 @@ export default function OraclePartnership() {
               <span className="text-[13px] sm:text-[14px] font-bold text-white leading-tight tracking-tight">
                 Oracle Partner
               </span>
-              <span className="text-[11px] sm:text-[11.5px] text-[#A3BFCC] leading-tight mt-0.5">
+              <span className="text-[11px] sm:text-[11.5px] text-[#A5B1C3] leading-tight mt-0.5">
                 Delivering technology solutions powered by Oracle FLEXCUBE
               </span>
             </div>
@@ -379,16 +379,16 @@ export default function OraclePartnership() {
         </div>
 
         {/* 5. Bottom Capability Navigation Line */}
-        <div className="mt-8 sm:mt-10 flex items-center justify-center gap-3 sm:gap-4 text-[12px] sm:text-[13px] text-[#8EAAB8] font-medium tracking-wide">
+        <div className="mt-8 sm:mt-10 flex items-center justify-center gap-3 sm:gap-4 text-[12px] sm:text-[13px] text-[#8E9DB4] font-medium tracking-wide">
           <div className="w-10 sm:w-20 h-[1px] bg-gradient-to-r from-transparent to-[#00D9D0]/40" />
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 select-none">
-            <span className="text-[#C3D6E0] hover:text-white transition-colors">Oracle FLEXCUBE</span>
+            <span className="text-[#C3CCD9] hover:text-white transition-colors">Oracle FLEXCUBE</span>
             <span className="text-[#00D9D0] font-bold text-[10px]">•</span>
-            <span className="text-[#C3D6E0] hover:text-white transition-colors">Implementation & Customization</span>
+            <span className="text-[#C3CCD9] hover:text-white transition-colors">Implementation & Customization</span>
             <span className="text-[#00D9D0] font-bold text-[10px]">•</span>
-            <span className="text-[#C3D6E0] hover:text-white transition-colors">Integration</span>
+            <span className="text-[#C3CCD9] hover:text-white transition-colors">Integration</span>
             <span className="text-[#00D9D0] font-bold text-[10px]">•</span>
-            <span className="text-[#C3D6E0] hover:text-white transition-colors">Managed Support</span>
+            <span className="text-[#C3CCD9] hover:text-white transition-colors">Managed Support</span>
           </div>
           <div className="w-10 sm:w-20 h-[1px] bg-gradient-to-l from-transparent to-[#00D9D0]/40" />
         </div>

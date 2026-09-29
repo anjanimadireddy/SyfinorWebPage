@@ -5,10 +5,10 @@ import syfinorLogoWhite from '../assets/images/syfinor-logo-white.png';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#092530] text-white pt-12 pb-8 border-t border-[#123E4F]">
+    <footer className="bg-[#0F1A2E] text-white pt-12 pb-8 border-t border-[#243552]">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Top Tier: Logo, Mission, Partner Badge, Social Icons */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-10 border-b border-[#144355]">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-10 border-b border-[#243552]">
           {/* Logo & Brief Tagline */}
           <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
             <img
@@ -16,8 +16,8 @@ export default function Footer() {
               alt="Syfinor"
               className="h-10 sm:h-11 w-auto object-contain flex-shrink-0"
             />
-            <div className="hidden sm:block w-[1px] h-6 bg-[#1D4E62]" />
-            <p className="text-[12.5px] text-[#86AEBF] max-w-sm">
+            <div className="hidden sm:block w-[1px] h-6 bg-[#2E4266]" />
+            <p className="text-[12.5px] text-[#8A9AB2] max-w-sm">
               Intelligent financial solutions for forward-thinking organizations. Empowering decisions, accelerating growth.
             </p>
           </div>
@@ -33,14 +33,14 @@ export default function Footer() {
               href="https://www.linkedin.com/company/syfinor-technologies/posts/?feedView=all"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-9 h-9 rounded-lg bg-[#0D3240] border border-[#1C485A] flex items-center justify-center text-[#86AEBF] hover:text-[#00B89F] hover:border-[#00B89F] transition-all"
+              className="w-9 h-9 rounded-lg bg-[#1A2742] border border-[#2E4266] flex items-center justify-center text-[#8A9AB2] hover:text-[#00B89F] hover:border-[#00B89F] transition-all"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-4 h-4" />
             </a>
             <a
               href="#"
-              className="w-9 h-9 rounded-lg bg-[#0D3240] border border-[#1C485A] flex items-center justify-center text-[#86AEBF] hover:text-[#00B89F] hover:border-[#00B89F] transition-all"
+              className="w-9 h-9 rounded-lg bg-[#1A2742] border border-[#2E4266] flex items-center justify-center text-[#8A9AB2] hover:text-[#00B89F] hover:border-[#00B89F] transition-all"
               aria-label="Website"
             >
               <Globe className="w-4 h-4" />
@@ -49,13 +49,13 @@ export default function Footer() {
         </div>
 
         {/* Middle Tier: Horizontal Categorized Links (as seen in screenshot) */}
-        <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-6 text-[13px] border-b border-[#144355]">
+        <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-6 text-[13px] border-b border-[#243552]">
           {/* COMPANY */}
           <div className="flex items-center gap-6">
             <span className="text-[11px] font-bold text-[#00B89F] uppercase tracking-wider">
               COMPANY
             </span>
-            <div className="flex items-center gap-4 text-[#8FB5C5]">
+            <div className="flex items-center gap-4 text-[#93A3BA]">
               <a href="#about" className="hover:text-white transition-colors">
                 Mission & Vision
               </a>
@@ -73,7 +73,7 @@ export default function Footer() {
             <span className="text-[11px] font-bold text-[#00B89F] uppercase tracking-wider">
               PLATFORM
             </span>
-            <div className="flex items-center gap-4 text-[#8FB5C5]">
+            <div className="flex items-center gap-4 text-[#93A3BA]">
               <a href="#products" className="hover:text-white transition-colors">
                 Products
               </a>
@@ -91,7 +91,7 @@ export default function Footer() {
             <span className="text-[11px] font-bold text-[#00B89F] uppercase tracking-wider">
               LEGAL
             </span>
-            <div className="flex items-center gap-4 text-[#8FB5C5]">
+            <div className="flex items-center gap-4 text-[#93A3BA]">
               <a href="#" className="hover:text-white transition-colors">
                 Privacy Policy
               </a>

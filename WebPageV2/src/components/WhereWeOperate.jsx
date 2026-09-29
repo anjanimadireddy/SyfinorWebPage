@@ -237,12 +237,12 @@ export default function WhereWeOperate() {
 
           {/* Heading */}
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold tracking-tight leading-tight mb-3">
-            <span className="text-[#0E2737]">Where We </span>
+            <span className="text-[#1A2742]">Where We </span>
             <span className="text-[#00D9D0]">Operate</span>
           </h2>
 
           {/* Description (Preserved exactly) */}
-          <p className="text-[15px] sm:text-[16px] text-[#4A687A] leading-relaxed font-normal">
+          <p className="text-[15px] sm:text-[16px] text-[#4A5568] leading-relaxed font-normal">
             Syfinor's team brings hands-on delivery experience across three continents, serving banks and financial institutions in diverse regulatory environments.
           </p>
         </div>
@@ -254,9 +254,9 @@ export default function WhereWeOperate() {
           {/* ========================================================================= */}
           <div className="lg:col-span-7 flex flex-col">
             <div
-              className="w-full flex-1 rounded-[22px] border border-[#00D9D0]/35 flex flex-col justify-between overflow-hidden relative shadow-[0_12px_36px_rgba(6,40,55,0.22)]"
+              className="w-full flex-1 rounded-[22px] border border-[#00D9D0]/35 flex flex-col justify-between overflow-hidden relative shadow-[0_12px_36px_rgba(15,26,46,0.22)]"
               style={{
-                backgroundColor: '#062837',
+                backgroundColor: '#0C1828',
               }}
             >
               {/* Subtle dark grid background behind map */}
@@ -274,7 +274,7 @@ export default function WhereWeOperate() {
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] pointer-events-none"
                 style={{
                   background:
-                    'radial-gradient(ellipse at center, rgba(0, 217, 208, 0.15) 0%, rgba(6, 40, 55, 0) 70%)',
+                    'radial-gradient(ellipse at center, rgba(0, 217, 208, 0.15) 0%, rgba(15,26,46, 0) 70%)',
                 }}
               />
 
@@ -429,7 +429,7 @@ export default function WhereWeOperate() {
                       fill="#00D9D0"
                       filter="drop-shadow(0 0 6px #00D9D0)"
                     />
-                    <circle cx="225" cy="256" r="3" fill="#062837" />
+                    <circle cx="225" cy="256" r="3" fill="#0C1828" />
                     {/* Compact Dark Label */}
                     <rect
                       x="172"
@@ -437,7 +437,7 @@ export default function WhereWeOperate() {
                       width="106"
                       height="24"
                       rx="12"
-                      fill="#07222E"
+                      fill="#0C1828"
                       stroke="#00D9D0"
                       strokeWidth="1.2"
                       filter="drop-shadow(0 4px 8px rgba(0,0,0,0.5))"
@@ -466,7 +466,7 @@ export default function WhereWeOperate() {
                       fill="#00D9D0"
                       filter="drop-shadow(0 0 6px #00D9D0)"
                     />
-                    <circle cx="475" cy="231" r="3" fill="#062837" />
+                    <circle cx="475" cy="231" r="3" fill="#0C1828" />
                     {/* Compact Dark Label */}
                     <rect
                       x="444"
@@ -474,7 +474,7 @@ export default function WhereWeOperate() {
                       width="62"
                       height="24"
                       rx="12"
-                      fill="#07222E"
+                      fill="#0C1828"
                       stroke="#00D9D0"
                       strokeWidth="1.2"
                       filter="drop-shadow(0 4px 8px rgba(0,0,0,0.5))"
@@ -503,7 +503,7 @@ export default function WhereWeOperate() {
                       fill="#00D9D0"
                       filter="drop-shadow(0 0 6px #00D9D0)"
                     />
-                    <circle cx="618" cy="211" r="3" fill="#062837" />
+                    <circle cx="618" cy="211" r="3" fill="#0C1828" />
                     {/* Compact Dark Label */}
                     <rect
                       x="590"
@@ -511,7 +511,7 @@ export default function WhereWeOperate() {
                       width="56"
                       height="24"
                       rx="12"
-                      fill="#07222E"
+                      fill="#0C1828"
                       stroke="#00D9D0"
                       strokeWidth="1.2"
                       filter="drop-shadow(0 4px 8px rgba(0,0,0,0.5))"
@@ -540,7 +540,7 @@ export default function WhereWeOperate() {
                       fill="#00D9D0"
                       filter="drop-shadow(0 0 6px #00D9D0)"
                     />
-                    <circle cx="728" cy="206" r="3" fill="#062837" />
+                    <circle cx="728" cy="206" r="3" fill="#0C1828" />
                     {/* Compact Dark Label */}
                     <rect
                       x="701"
@@ -548,7 +548,7 @@ export default function WhereWeOperate() {
                       width="54"
                       height="24"
                       rx="12"
-                      fill="#07222E"
+                      fill="#0C1828"
                       stroke="#00D9D0"
                       strokeWidth="1.2"
                       filter="drop-shadow(0 4px 8px rgba(0,0,0,0.5))"
@@ -569,7 +569,7 @@ export default function WhereWeOperate() {
               </div>
 
               {/* Lower Map Area: Integrated Information Strip */}
-              <div className="border-t border-[#00D9D0]/20 bg-[#051F2C]/85 px-4 sm:px-8 py-3.5 sm:py-4 flex items-center justify-around relative z-10 backdrop-blur-xs">
+              <div className="border-t border-[#00D9D0]/20 bg-[#0C1828]/85 px-4 sm:px-8 py-3.5 sm:py-4 flex items-center justify-around relative z-10 backdrop-blur-xs">
                 {/* Metric 1: Continents */}
                 <div className="flex items-center gap-2.5 sm:gap-3">
                   <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#00D9D0] bg-[#00D9D0]/10 flex items-center justify-center text-[#00D9D0] shadow-[0_0_10px_rgba(0,217,208,0.2)] flex-shrink-0">
@@ -579,7 +579,7 @@ export default function WhereWeOperate() {
                     <div className="text-lg sm:text-2xl font-black text-white leading-none">
                       3
                     </div>
-                    <div className="text-[11px] sm:text-[12px] text-[#8BA7B5] font-medium leading-tight mt-0.5">
+                    <div className="text-[11px] sm:text-[12px] text-[#8A9AB2] font-medium leading-tight mt-0.5">
                       Continents
                     </div>
                   </div>
@@ -597,7 +597,7 @@ export default function WhereWeOperate() {
                     <div className="text-lg sm:text-2xl font-black text-white leading-none">
                       4
                     </div>
-                    <div className="text-[11px] sm:text-[12px] text-[#8BA7B5] font-medium leading-tight mt-0.5">
+                    <div className="text-[11px] sm:text-[12px] text-[#8A9AB2] font-medium leading-tight mt-0.5">
                       Key Regions
                     </div>
                   </div>
@@ -615,7 +615,7 @@ export default function WhereWeOperate() {
                     <div className="text-[13px] sm:text-[14px] font-bold text-white leading-tight">
                       Regulatory
                     </div>
-                    <div className="text-[11px] sm:text-[12px] text-[#8BA7B5] font-medium leading-tight mt-0.5">
+                    <div className="text-[11px] sm:text-[12px] text-[#8A9AB2] font-medium leading-tight mt-0.5">
                       Ready
                     </div>
                   </div>
@@ -635,7 +635,7 @@ export default function WhereWeOperate() {
               return (
                 <div
                   key={region.id}
-                  className="bg-[#F4FAFD] border border-[#B9DDED] rounded-xl sm:rounded-2xl p-4 sm:p-4.5 relative overflow-hidden flex items-center justify-between shadow-[0_2px_10px_rgba(14,39,55,0.03)] hover:border-[#00D9D0] hover:shadow-[0_4px_18px_rgba(0,217,208,0.12)] transition-all duration-200 group flex-1"
+                  className="bg-[#F4FAFD] border border-[#B9DDED] rounded-xl sm:rounded-2xl p-4 sm:p-4.5 relative overflow-hidden flex items-center justify-between shadow-[0_2px_10px_rgba(15,26,46,0.03)] hover:border-[#00D9D0] hover:shadow-[0_4px_18px_rgba(0,217,208,0.12)] transition-all duration-200 group flex-1"
                 >
                   {/* Narrow colored vertical accent line on LEFT edge (alternating #00D9D0 and #168BFF) */}
                   <div
@@ -664,10 +664,10 @@ export default function WhereWeOperate() {
 
                     {/* Regional Title and Description */}
                     <div>
-                      <h3 className="text-[15.5px] sm:text-[16.5px] font-bold text-[#0E2737] leading-snug tracking-tight">
+                      <h3 className="text-[15.5px] sm:text-[16.5px] font-bold text-[#1A2742] leading-snug tracking-tight">
                         {region.title}
                       </h3>
-                      <p className="text-[12.5px] sm:text-[13px] text-[#4A687A] leading-relaxed mt-1 font-normal">
+                      <p className="text-[12.5px] sm:text-[13px] text-[#4A5568] leading-relaxed mt-1 font-normal">
                         {region.description}
                       </p>
                     </div>

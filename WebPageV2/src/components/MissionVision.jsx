@@ -26,10 +26,10 @@ export default function MissionVision() {
           <div className="text-[12px] font-bold tracking-[0.2em] text-[#00B89F] uppercase mb-2">
             WHO WE ARE
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#0D3240] tracking-tight mb-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#1A2742] tracking-tight mb-3">
             Our Mission &amp; Vision
           </h2>
-          <p className="text-[15px] sm:text-[16.5px] text-[#41687A] leading-relaxed">
+          <p className="text-[15px] sm:text-[16.5px] text-[#4A5568] leading-relaxed">
             Driven by purpose, guided by innovation — our mission and vision define how we serve clients and shape the future of finance.
           </p>
         </div>
@@ -65,10 +65,10 @@ export default function MissionVision() {
               </svg>
             </div>
 
-            <h3 className="text-2xl sm:text-[26px] font-bold text-[#0D3240] mb-3.5 tracking-tight">
+            <h3 className="text-2xl sm:text-[26px] font-bold text-[#1A2742] mb-3.5 tracking-tight">
               Our Mission
             </h3>
-            <p className="text-[15px] sm:text-[15.5px] leading-relaxed text-[#2C5263] font-normal">
+            <p className="text-[15px] sm:text-[15.5px] leading-relaxed text-[#3D5070] font-normal">
               At Syfinor, our mission is to simplify banking operations through intelligent technology. We build purpose-driven products and deliver round-the-clock services that eliminate manual complexity, automate critical workflows, and empower financial institutions to focus on what matters most — serving their customers with speed, accuracy, and confidence.
             </p>
           </div>
@@ -81,10 +81,10 @@ export default function MissionVision() {
               <img src={telescopeIcon} alt="Telescope" className="w-full h-full object-contain scale-[2.2]" />
             </div>
 
-            <h3 className="text-2xl sm:text-[26px] font-bold text-[#0D3240] mb-3.5 tracking-tight">
+            <h3 className="text-2xl sm:text-[26px] font-bold text-[#1A2742] mb-3.5 tracking-tight">
               Our Vision
             </h3>
-            <p className="text-[15px] sm:text-[15.5px] leading-relaxed text-[#2C5263] font-normal">
+            <p className="text-[15px] sm:text-[15.5px] leading-relaxed text-[#3D5070] font-normal">
               To be the most trusted technology partner for banks and financial institutions worldwide — delivering innovative, scalable solutions that transform how banking works; making every process simpler, every operation smarter, and every institution more resilient for the future.
             </p>
           </div>

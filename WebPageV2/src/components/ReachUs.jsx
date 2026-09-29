@@ -50,8 +50,8 @@ export default function ReachUs() {
       title: 'OFFICE ADDRESS',
       icon: MapPin,
       content: (
-        <div className="text-[13px] text-[#2C5263] leading-relaxed">
-          <p className="font-semibold text-[#0E2737]">Syfinor Technologies Private Limited</p>
+        <div className="text-[13px] text-[#3D5070] leading-relaxed">
+          <p className="font-semibold text-[#1A2742]">Syfinor Technologies Private Limited</p>
           <p>B4-1005, BDA Chandragiri PH-2,</p>
           <p>Bidare Agrahara, Kadugodi Extension,</p>
           <p>Bangalore – 560067, Karnataka, India</p>
@@ -64,7 +64,7 @@ export default function ReachUs() {
       href: 'tel:+918106752927',
       ariaLabel: 'Call Syfinor at +91 81067 52927',
       content: (
-        <span className="text-[14px] font-bold text-[#0E2737] group-hover:text-[#00A39B] transition-colors">
+        <span className="text-[14px] font-bold text-[#1A2742] group-hover:text-[#00A39B] transition-colors">
           +91 81067 52927
         </span>
       ),
@@ -75,7 +75,7 @@ export default function ReachUs() {
       href: 'mailto:info@syfinor.com',
       ariaLabel: 'Email Syfinor at info@syfinor.com',
       content: (
-        <span className="text-[14px] font-bold text-[#0E2737] group-hover:text-[#00A39B] transition-colors">
+        <span className="text-[14px] font-bold text-[#1A2742] group-hover:text-[#00A39B] transition-colors">
           info@syfinor.com
         </span>
       ),
@@ -84,7 +84,7 @@ export default function ReachUs() {
       title: 'BUSINESS HOURS',
       icon: Clock,
       content: (
-        <p className="text-[13.5px] text-[#2C5263] font-semibold">
+        <p className="text-[13.5px] text-[#3D5070] font-semibold">
           Monday – Sunday: 9:00 AM – 10:00 PM IST
         </p>
       ),
@@ -107,7 +107,7 @@ export default function ReachUs() {
   return (
     <section
       id="contact"
-      className="bg-[#0E2737] text-white py-16 sm:py-20 lg:py-24 border-b border-[#164356] relative overflow-hidden"
+      className="bg-[#0F1A2E] text-white py-16 sm:py-20 lg:py-24 border-b border-[#243552] relative overflow-hidden"
     >
       {/* Subtle edge technical wave lines */}
       <div className="absolute top-0 left-0 w-80 h-80 pointer-events-none opacity-25">
@@ -154,7 +154,7 @@ export default function ReachUs() {
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-white tracking-tight mb-3">
             Reach Us
           </h2>
-          <p className="text-[15px] sm:text-[16px] text-[#A6C9D7] leading-relaxed">
+          <p className="text-[15px] sm:text-[16px] text-[#AAB6C8] leading-relaxed">
             Have a project in mind or want to explore how Syfinor can help your organization? We'd love to hear from you.
           </p>
         </div>
@@ -163,12 +163,12 @@ export default function ReachUs() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start">
           {/* Left Column (7 cols): Contact Form Card */}
           <div className="lg:col-span-7">
-            <div className="bg-[#EAF6FF] border border-[#BCE1F5] rounded-2xl sm:rounded-[22px] p-6 sm:p-8 lg:p-9 text-[#0E2737] shadow-[0_8px_28px_rgba(6,40,55,0.14)] hover:border-[#00D9D0] hover:shadow-[0_0_10px_rgba(0,217,208,0.22),0_0_24px_rgba(0,217,208,0.12),0_8px_28px_rgba(6,40,55,0.14)] hover:-translate-y-0.5 transition-[border-color,box-shadow,transform] duration-300 ease-in-out">
+            <div className="bg-[#EAF6FF] border border-[#BCE1F5] rounded-2xl sm:rounded-[22px] p-6 sm:p-8 lg:p-9 text-[#1A2742] shadow-[0_8px_28px_rgba(15,26,46,0.14)] hover:border-[#00D9D0] hover:shadow-[0_0_10px_rgba(0,217,208,0.22),0_0_24px_rgba(0,217,208,0.12),0_8px_28px_rgba(15,26,46,0.14)] hover:-translate-y-0.5 transition-[border-color,box-shadow,transform] duration-300 ease-in-out">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-white border border-[#BCE1F5] flex items-center justify-center text-[#00A39B] shadow-2xs flex-shrink-0">
                   <Send className="w-4.5 h-4.5" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-extrabold text-[#0E2737] tracking-tight">
+                <h3 className="text-xl sm:text-2xl font-extrabold text-[#1A2742] tracking-tight">
                   Send Us a Message
                 </h3>
               </div>
@@ -176,7 +176,7 @@ export default function ReachUs() {
               {submitted ? (
                 <div className="bg-white border border-[#BCE1F5] rounded-xl p-8 text-center space-y-3">
                   <CheckCircle2 className="w-12 h-12 text-[#00A39B] mx-auto animate-bounce" />
-                  <h4 className="text-xl font-bold text-[#0E2737]">
+                  <h4 className="text-xl font-bold text-[#1A2742]">
                     Message Sent Successfully!
                   </h4>
                   <p className="text-[14px] text-[#355A6B] max-w-md mx-auto">
@@ -188,7 +188,7 @@ export default function ReachUs() {
                   {/* First Name & Last Name */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[12.5px] font-semibold text-[#0E2737] mb-1.5">
+                      <label className="block text-[12.5px] font-semibold text-[#1A2742] mb-1.5">
                         First Name
                       </label>
                       <div className="relative">
@@ -201,13 +201,13 @@ export default function ReachUs() {
                           onChange={(e) =>
                             setFormData({ ...formData, firstName: e.target.value })
                           }
-                          className="w-full bg-white border border-[#BFDFEE] rounded-lg pl-9.5 pr-3.5 py-2.5 text-[14px] text-[#0E2737] placeholder-slate-400 focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200"
+                          className="w-full bg-white border border-[#BFDFEE] rounded-lg pl-9.5 pr-3.5 py-2.5 text-[14px] text-[#1A2742] placeholder-slate-400 focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-[12.5px] font-semibold text-[#0E2737] mb-1.5">
+                      <label className="block text-[12.5px] font-semibold text-[#1A2742] mb-1.5">
                         Last Name
                       </label>
                       <input
@@ -217,14 +217,14 @@ export default function ReachUs() {
                         onChange={(e) =>
                           setFormData({ ...formData, lastName: e.target.value })
                         }
-                        className="w-full bg-white border border-[#BFDFEE] rounded-lg px-3.5 py-2.5 text-[14px] text-[#0E2737] placeholder-slate-400 focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200"
+                        className="w-full bg-white border border-[#BFDFEE] rounded-lg px-3.5 py-2.5 text-[14px] text-[#1A2742] placeholder-slate-400 focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200"
                       />
                     </div>
                   </div>
 
                   {/* Work Email */}
                   <div>
-                    <label className="block text-[12.5px] font-semibold text-[#0E2737] mb-1.5">
+                    <label className="block text-[12.5px] font-semibold text-[#1A2742] mb-1.5">
                       Work Email
                     </label>
                     <div className="relative">
@@ -237,14 +237,14 @@ export default function ReachUs() {
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
-                        className="w-full bg-white border border-[#BFDFEE] rounded-lg pl-9.5 pr-3.5 py-2.5 text-[14px] text-[#0E2737] placeholder-slate-400 focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200"
+                        className="w-full bg-white border border-[#BFDFEE] rounded-lg pl-9.5 pr-3.5 py-2.5 text-[14px] text-[#1A2742] placeholder-slate-400 focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200"
                       />
                     </div>
                   </div>
 
                   {/* Organization */}
                   <div>
-                    <label className="block text-[12.5px] font-semibold text-[#0E2737] mb-1.5">
+                    <label className="block text-[12.5px] font-semibold text-[#1A2742] mb-1.5">
                       Organization
                     </label>
                     <div className="relative">
@@ -256,14 +256,14 @@ export default function ReachUs() {
                         onChange={(e) =>
                           setFormData({ ...formData, organization: e.target.value })
                         }
-                        className="w-full bg-white border border-[#BFDFEE] rounded-lg pl-9.5 pr-3.5 py-2.5 text-[14px] text-[#0E2737] placeholder-slate-400 focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200"
+                        className="w-full bg-white border border-[#BFDFEE] rounded-lg pl-9.5 pr-3.5 py-2.5 text-[14px] text-[#1A2742] placeholder-slate-400 focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200"
                       />
                     </div>
                   </div>
 
                   {/* Enquiry Type */}
                   <div>
-                    <label className="block text-[12.5px] font-semibold text-[#0E2737] mb-1.5">
+                    <label className="block text-[12.5px] font-semibold text-[#1A2742] mb-1.5">
                       Enquiry Type
                     </label>
                     <div className="relative">
@@ -272,7 +272,7 @@ export default function ReachUs() {
                         onChange={(e) =>
                           setFormData({ ...formData, enquiryType: e.target.value })
                         }
-                        className="w-full bg-white border border-[#BFDFEE] rounded-lg px-3.5 py-2.5 text-[14px] text-[#0E2737] focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200 appearance-none cursor-pointer"
+                        className="w-full bg-white border border-[#BFDFEE] rounded-lg px-3.5 py-2.5 text-[14px] text-[#1A2742] focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200 appearance-none cursor-pointer"
                       >
                         <option value="">Select an option...</option>
                         <option value="Oracle FLEXCUBE Implementation">
@@ -300,7 +300,7 @@ export default function ReachUs() {
 
                   {/* Message */}
                   <div>
-                    <label className="block text-[12.5px] font-semibold text-[#0E2737] mb-1.5">
+                    <label className="block text-[12.5px] font-semibold text-[#1A2742] mb-1.5">
                       Message
                     </label>
                     <textarea
@@ -310,7 +310,7 @@ export default function ReachUs() {
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      className="w-full bg-white border border-[#BFDFEE] rounded-lg px-3.5 py-2.5 text-[14px] text-[#0E2737] placeholder-slate-400 focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200 resize-none"
+                      className="w-full bg-white border border-[#BFDFEE] rounded-lg px-3.5 py-2.5 text-[14px] text-[#1A2742] placeholder-slate-400 focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200 resize-none"
                     />
                   </div>
 
@@ -353,7 +353,7 @@ export default function ReachUs() {
               );
 
               const cardClasses =
-                "bg-[#EAF6FF] border border-[#BCE1F5] rounded-xl sm:rounded-2xl p-4.5 sm:p-5 text-[#0E2737] flex items-start justify-between gap-3.5 shadow-[0_4px_16px_rgba(6,40,55,0.06)] hover:border-[#00D9D0] hover:shadow-[0_0_8px_rgba(0,217,208,0.20),0_0_20px_rgba(0,217,208,0.10)] hover:-translate-y-0.5 transition-[border-color,box-shadow,transform] duration-300 ease-in-out group";
+                "bg-[#EAF6FF] border border-[#BCE1F5] rounded-xl sm:rounded-2xl p-4.5 sm:p-5 text-[#1A2742] flex items-start justify-between gap-3.5 shadow-[0_4px_16px_rgba(15,26,46,0.06)] hover:border-[#00D9D0] hover:shadow-[0_0_8px_rgba(0,217,208,0.20),0_0_20px_rgba(0,217,208,0.10)] hover:-translate-y-0.5 transition-[border-color,box-shadow,transform] duration-300 ease-in-out group";
 
               if (card.href) {
                 return (

@@ -47,10 +47,10 @@ export default function DirectorsHistory() {
           <div className="text-[12px] font-bold tracking-[0.2em] text-[#00B89F] uppercase mb-2">
             LEADERSHIP
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#0D3240] tracking-tight mb-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#1A2742] tracking-tight mb-3">
             Directors & History
           </h2>
-          <p className="text-[15px] sm:text-[16.5px] text-[#41687A] leading-relaxed">
+          <p className="text-[15px] sm:text-[16.5px] text-[#4A5568] leading-relaxed">
             Our leadership team brings deep industry expertise and a shared vision to drive Syfinor's growth and long-term success.
           </p>
         </div>
@@ -75,7 +75,7 @@ export default function DirectorsHistory() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-xl sm:text-[23px] lg:text-[24px] font-bold text-[#0D3240] leading-snug tracking-tight">
+                    <h3 className="text-xl sm:text-[23px] lg:text-[24px] font-bold text-[#1A2742] leading-snug tracking-tight">
                       {leader.name}
                     </h3>
                     <div className="text-[11.5px] sm:text-[12px] font-bold text-[#00B89F] tracking-[0.14em] uppercase mt-1">
@@ -85,7 +85,7 @@ export default function DirectorsHistory() {
                 </div>
 
                 {/* Biography */}
-                <p className="text-[14px] sm:text-[14.5px] leading-relaxed text-[#2C5263] font-normal mb-6 flex-grow">
+                <p className="text-[14px] sm:text-[14.5px] leading-relaxed text-[#3D5070] font-normal mb-6 flex-grow">
                   {leader.bio}
                 </p>
               </div>
@@ -112,11 +112,11 @@ export default function DirectorsHistory() {
 
       {/* Credentials Modal Dialog */}
       {selectedLeader && (
-        <div className="fixed inset-0 z-50 bg-[#0D3240]/80 backdrop-blur-xs flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 bg-[#0F1A2E]/80 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-7 shadow-2xl border border-slate-200 relative animate-in fade-in zoom-in-95">
             <button
               onClick={() => setSelectedLeader(null)}
-              className="absolute top-4 right-4 p-1.5 rounded-lg text-slate-400 hover:text-[#0D3240] hover:bg-slate-100 transition-colors"
+              className="absolute top-4 right-4 p-1.5 rounded-lg text-slate-400 hover:text-[#1A2742] hover:bg-slate-100 transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
@@ -131,7 +131,7 @@ export default function DirectorsHistory() {
                 />
               </div>
               <div>
-                <h4 className="text-xl font-bold text-[#0D3240]">
+                <h4 className="text-xl font-bold text-[#1A2742]">
                   {selectedLeader.name}
                 </h4>
                 <p className="text-xs font-bold text-[#00B89F] uppercase tracking-wider mt-0.5">
@@ -146,7 +146,7 @@ export default function DirectorsHistory() {
               </h5>
               <div className="space-y-2.5">
                 {selectedLeader.credentials.map((cred, i) => (
-                  <div key={i} className="flex items-start gap-2.5 text-[13.5px] text-[#2C5263]">
+                  <div key={i} className="flex items-start gap-2.5 text-[13.5px] text-[#3D5070]">
                     <CheckCircle className="w-4 h-4 text-[#00B89F] flex-shrink-0 mt-0.5" />
                     <span>{cred}</span>
                   </div>

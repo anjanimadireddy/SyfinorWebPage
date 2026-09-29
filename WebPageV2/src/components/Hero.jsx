@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative bg-[#0D3240] text-white overflow-hidden border-b border-[#144254] box-border w-full flex flex-col justify-between h-[calc(100vh-80px)] min-h-[calc(100vh-80px)]"
+      className="relative bg-[#0F1A2E] text-white overflow-hidden border-b border-[#243552] box-border w-full flex flex-col justify-between h-[calc(100vh-80px)] min-h-[calc(100vh-80px)]"
       style={{ boxSizing: 'border-box' }}
     >
       {/* Background Slideshow */}
@@ -38,8 +38,8 @@ export default function Hero() {
             aria-hidden="true"
           />
         ))}
-        <div className="absolute inset-0 bg-[#0D3240]/80 backdrop-blur-[0.5px]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0D3240] via-transparent to-[#0D3240]/50" />
+        <div className="absolute inset-0 bg-[#0F1A2E]/80 backdrop-blur-[0.5px]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A2E] via-transparent to-[#0F1A2E]/50" />
       </div>
 
       {/* Ambient glowing accents */}
@@ -90,7 +90,7 @@ export default function Hero() {
             </h1>
 
             {/* Description */}
-            <p className="text-[15.5px] sm:text-[16.5px] lg:text-[17.5px] text-[#A6C9D7] leading-relaxed max-w-2xl font-normal">
+            <p className="text-[15.5px] sm:text-[16.5px] lg:text-[17.5px] text-[#AAB6C8] leading-relaxed max-w-2xl font-normal">
               Syfinor delivers cutting-edge banking technology and consulting services — empowering institutions to navigate complexity with confidence, speed, and precision.
             </p>
 
@@ -108,7 +108,7 @@ export default function Hero() {
                     Partner
                   </span>
                 </div>
-                <div className="text-[12px] sm:text-[13px] text-[#A6C9D7] leading-[1.35] font-normal">
+                <div className="text-[12px] sm:text-[13px] text-[#AAB6C8] leading-[1.35] font-normal">
                   <div>Delivering technology solutions</div>
                   <div>powered by Oracle FLEXCUBE</div>
                 </div>
@@ -176,7 +176,7 @@ export default function Hero() {
               </div>
 
               {/* Stats Card */}
-              <div className="relative z-10 bg-[#EAF6FF] rounded-2xl p-5 sm:p-6 border border-[#C5E5F6] shadow-[0_12px_36px_rgba(0,0,0,0.28)] text-[#0D3240] w-full">
+              <div className="relative z-10 bg-[#EAF6FF] rounded-2xl p-5 sm:p-6 border border-[#C5E5F6] shadow-[0_12px_36px_rgba(0,0,0,0.28)] text-[#1A2742] w-full">
                 <div className="space-y-4.5 sm:space-y-5">
 
                   {/* Stat 1 */}
@@ -185,8 +185,8 @@ export default function Hero() {
                       <Calendar className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
                     </div>
                     <div>
-                      <div className="text-3xl sm:text-4xl font-extrabold text-[#0D3240] tracking-tight leading-none">15+</div>
-                      <div className="text-[13px] sm:text-[14px] font-medium text-[#375F71] mt-1.5 leading-snug">Years of Banking Tech Experience</div>
+                      <div className="text-3xl sm:text-4xl font-extrabold text-[#1A2742] tracking-tight leading-none">15+</div>
+                      <div className="text-[13px] sm:text-[14px] font-medium text-[#4A5568] mt-1.5 leading-snug">Years of Banking Tech Experience</div>
                     </div>
                   </div>
 
@@ -198,8 +198,8 @@ export default function Hero() {
                       <Globe className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
                     </div>
                     <div>
-                      <div className="text-3xl sm:text-4xl font-extrabold text-[#0D3240] tracking-tight leading-none">3+</div>
-                      <div className="text-[13px] sm:text-[14px] font-medium text-[#375F71] mt-1.5 leading-snug">Continents Served</div>
+                      <div className="text-3xl sm:text-4xl font-extrabold text-[#1A2742] tracking-tight leading-none">3+</div>
+                      <div className="text-[13px] sm:text-[14px] font-medium text-[#4A5568] mt-1.5 leading-snug">Continents Served</div>
                     </div>
                   </div>
 
@@ -211,8 +211,8 @@ export default function Hero() {
                       <Headphones className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
                     </div>
                     <div>
-                      <div className="text-3xl sm:text-4xl font-extrabold text-[#0D3240] tracking-tight leading-none">24/7</div>
-                      <div className="text-[13px] sm:text-[14px] font-medium text-[#375F71] mt-1.5 leading-snug">Operational Support Coverage</div>
+                      <div className="text-3xl sm:text-4xl font-extrabold text-[#1A2742] tracking-tight leading-none">24/7</div>
+                      <div className="text-[13px] sm:text-[14px] font-medium text-[#4A5568] mt-1.5 leading-snug">Operational Support Coverage</div>
                     </div>
                   </div>
 

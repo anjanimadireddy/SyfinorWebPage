@@ -64,10 +64,10 @@ export default function ToolsTechnology() {
           <div className="text-[12px] font-bold tracking-[0.2em] text-[#00B89F] uppercase mb-2">
             OUR PLATFORM
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#0D3240] tracking-tight mb-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#1A2742] tracking-tight mb-3">
             Tools & Technology
           </h2>
-          <p className="text-[15px] sm:text-[16.5px] text-[#41687A] leading-relaxed">
+          <p className="text-[15px] sm:text-[16.5px] text-[#4A5568] leading-relaxed">
             From core banking implementation to managed support and team training — Syfinor covers the full service lifecycle for financial institutions running Oracle banking platforms.
           </p>
         </div>
@@ -81,7 +81,7 @@ export default function ToolsTechnology() {
               className={`px-4 py-2 rounded-lg text-[13.5px] font-semibold transition-all duration-150 ${
                 activeFilter === filter
                   ? 'bg-[#00B89F] text-white shadow-xs'
-                  : 'bg-[#EAF6FF] text-[#0D3240] border border-[#CDE8F7] hover:bg-[#DDF1FB]'
+                  : 'bg-[#EAF6FF] text-[#1A2742] border border-[#CDE8F7] hover:bg-[#DDF1FB]'
               }`}
             >
               {filter}
@@ -103,11 +103,11 @@ export default function ToolsTechnology() {
                     <Icon className="w-5 h-5" />
                   </div>
 
-                  <h3 className="text-[18px] sm:text-[19px] font-bold text-[#0D3240] mb-3 leading-snug tracking-tight">
+                  <h3 className="text-[18px] sm:text-[19px] font-bold text-[#1A2742] mb-3 leading-snug tracking-tight">
                     {tool.title}
                   </h3>
 
-                  <p className="text-[13.5px] sm:text-[14px] leading-relaxed text-[#2C5263] font-normal mb-6">
+                  <p className="text-[13.5px] sm:text-[14px] leading-relaxed text-[#3D5070] font-normal mb-6">
                     {tool.description}
                   </p>
                 </div>

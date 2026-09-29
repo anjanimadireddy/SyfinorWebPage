@@ -51,11 +51,11 @@ export default function WhatsAppWidget() {
           aria-label="WhatsApp Support Chat"
           className="mb-3.5 w-[315px] sm:w-[340px] max-w-[calc(100vw-32px)] bg-white rounded-2xl overflow-hidden border border-[#DCE8ED] animate-in fade-in slide-in-from-bottom-3 duration-250 flex flex-col transition-all"
           style={{
-            boxShadow: '0 16px 40px -8px rgba(13, 50, 64, 0.22), 0 4px 16px -2px rgba(13, 50, 64, 0.08)',
+            boxShadow: '0 16px 40px -8px rgba(15,26,46, 0.22), 0 4px 16px -2px rgba(15,26,46, 0.08)',
           }}
         >
           {/* Refined Syfinor-style Teal/Green Header */}
-          <div className="bg-gradient-to-r from-[#0C4654] via-[#0D5B66] to-[#009E88] px-4 py-3.5 flex items-center justify-between text-white border-b border-[#0A3D49]/30">
+          <div className="bg-gradient-to-r from-[#0F1A2E] via-[#1A2742] to-[#009E88] px-4 py-3.5 flex items-center justify-between text-white border-b border-[#243552]/30">
             <div className="flex items-center gap-3">
               {/* WhatsApp Icon with clean white glow */}
               <div className="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center flex-shrink-0 backdrop-blur-xs border border-white/20">
@@ -104,7 +104,7 @@ export default function WhatsAppWidget() {
           >
             {/* Clean Rounded Message Bubble */}
             <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-3 max-w-[86%] shadow-sm border border-[#E1ECF0] self-start">
-              <p className="text-[#0D3240] text-[13.5px] sm:text-[14px] leading-snug font-normal">
+              <p className="text-[#1A2742] text-[13.5px] sm:text-[14px] leading-snug font-normal">
                 How can I help you? :)
               </p>
               <div className="flex items-center justify-end gap-1 mt-1.5">
@@ -125,7 +125,7 @@ export default function WhatsAppWidget() {
                   onChange={(e) => setMessage(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="Write your message..."
-                  className="w-full text-[13px] text-[#0D3240] placeholder-slate-400 outline-none bg-transparent"
+                  className="w-full text-[13px] text-[#1A2742] placeholder-slate-400 outline-none bg-transparent"
                 />
               </div>
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
-import syfinorLogo from '../assets/images/syfinor-logo.png';
+import syfinorLogo from '../assets/images/syfinor-logo-header.png';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -65,31 +65,31 @@ export default function Header() {
         scrolled ? 'shadow-xs border-slate-200/80' : ''
       }`}
     >
-      <div className="w-full px-8 lg:px-12 xl:px-16 h-[88px] flex items-center justify-between">
+      <div className="w-full px-8 lg:px-12 xl:px-16 h-[80px] flex items-center justify-between gap-6">
 
         {/* Logo — Far Left */}
-        <div className="flex-shrink-0 flex items-center">
-          <a href="#" className="flex items-center">
+        <div className="flex-shrink-0 flex items-center gap-3.5 xl:gap-4">
+          <a href="#" className="flex items-center" aria-label="Syfinor home">
             <img
               src={syfinorLogo}
               alt="Syfinor"
-              className="h-12 sm:h-14 md:h-[60px] w-auto object-contain"
+              className="h-7 sm:h-8 xl:h-9 w-auto object-contain"
             />
           </a>
         </div>
 
         {/* Nav links + Contact — Far Right, grouped together */}
-        <div className="hidden md:flex items-center gap-6 lg:gap-8 xl:gap-10">
+        <div className="hidden lg:flex items-center gap-5 xl:gap-6 2xl:gap-10">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.substring(1);
             return (
               <a
                 key={link.name}
                 href={link.href}
-                className={`group relative text-[17.2px] font-medium whitespace-nowrap transition-colors duration-200 py-1 ${
+                className={`group relative text-[15.5px] lg:text-[16.5px] 2xl:text-[17.2px] font-medium whitespace-nowrap transition-colors duration-200 py-1 ${
                   isActive
                     ? 'text-[#00B89F] font-semibold'
-                    : 'text-[#0D3240] hover:text-[#00B89F]'
+                    : 'text-[#1A2742] hover:text-[#00B89F]'
                 }`}
               >
                 {link.name}
@@ -115,7 +115,7 @@ export default function Header() {
         {/* Mobile menu button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 rounded-lg text-[#0D3240] hover:bg-slate-100 transition-colors"
+          className="lg:hidden p-2 rounded-lg text-[#1A2742] hover:bg-slate-100 transition-colors"
           aria-label="Toggle Navigation Menu"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -124,13 +124,13 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-b border-slate-200 px-5 pt-3 pb-6 space-y-3 shadow-lg animate-in slide-in-from-top-2">
+        <div className="lg:hidden bg-white border-b border-slate-200 px-5 pt-3 pb-6 space-y-3 shadow-lg animate-in slide-in-from-top-2">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-[15px] font-medium text-[#0D3240] hover:text-[#00B89F] border-b border-slate-100/80"
+              className="block py-2 text-[15px] font-medium text-[#1A2742] hover:text-[#00B89F] border-b border-slate-100/80"
             >
               {link.name}
             </a>

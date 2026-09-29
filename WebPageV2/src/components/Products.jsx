@@ -16,6 +16,8 @@ import {
   Layers,
   ArrowRight
 } from 'lucide-react';
+import SyNotifyCard from './SyNotifyCard.jsx';
+import ComingSoonProducts from './ComingSoonProducts.jsx';
 
 export default function Products() {
   const industries = [
@@ -39,7 +41,7 @@ export default function Products() {
   return (
     <section
       id="products"
-      className="bg-[#0E2737] text-white py-16 sm:py-20 lg:py-24 border-b border-[#164356] relative overflow-hidden group/products"
+      className="bg-[#0F1A2E] text-white py-16 sm:py-20 lg:py-24 border-b border-[#243552] relative overflow-hidden group/products"
     >
       {/* 1. Subtle Outer Edge Decorations */}
       {/* Top-Left corner flowing cyan wave lines */}
@@ -123,7 +125,7 @@ export default function Products() {
             </h2>
 
             {/* Supporting Paragraph */}
-            <p className="text-[15px] sm:text-[16px] text-[#A6C9D7] leading-relaxed font-normal max-w-xl">
+            <p className="text-[15px] sm:text-[16px] text-[#AAB6C8] leading-relaxed font-normal max-w-xl">
               Purpose-built financial technology products for modern banking environments. Our portfolio is growing — with more solutions targeting core banking and payments on the way.
             </p>
           </div>
@@ -136,7 +138,7 @@ export default function Products() {
                 className="absolute inset-0 pointer-events-none"
                 style={{
                   background:
-                    'radial-gradient(ellipse at center, rgba(0, 217, 208, 0.18) 0%, rgba(14, 39, 55, 0) 70%)',
+                    'radial-gradient(ellipse at center, rgba(0, 217, 208, 0.18) 0%, rgba(15,26,46, 0) 70%)',
                 }}
               />
 
@@ -185,7 +187,7 @@ export default function Products() {
                     width="80"
                     height="85"
                     rx="12"
-                    fill="#082230"
+                    fill="#0C1828"
                     stroke="#00D9D0"
                     strokeWidth="1.8"
                   />
@@ -196,7 +198,7 @@ export default function Products() {
                     width="68"
                     height="73"
                     rx="8"
-                    fill="#0D3244"
+                    fill="#16233A"
                     stroke="#00D9D0"
                     strokeWidth="0.8"
                     strokeOpacity="0.4"
@@ -226,7 +228,7 @@ export default function Products() {
                     width="44"
                     height="44"
                     rx="8"
-                    fill="#092837"
+                    fill="#131F35"
                     stroke="#00D9D0"
                     strokeWidth="1.2"
                   />
@@ -254,7 +256,7 @@ export default function Products() {
                     width="48"
                     height="38"
                     rx="8"
-                    fill="#092837"
+                    fill="#131F35"
                     stroke="#00D9D0"
                     strokeWidth="1.2"
                   />
@@ -280,7 +282,7 @@ export default function Products() {
                     width="42"
                     height="42"
                     rx="8"
-                    fill="#092837"
+                    fill="#131F35"
                     stroke="#00D9D0"
                     strokeWidth="1.2"
                   />
@@ -302,7 +304,7 @@ export default function Products() {
           {/* --------------------------------------------------------------------- */}
           {/* LEFT CARD — SYWATCH (~58% width: lg:col-span-7) */}
           {/* --------------------------------------------------------------------- */}
-          <div className="lg:col-span-7 bg-[#EAF6FF] border border-[#BCE1F5] rounded-[22px] p-6 sm:p-8 lg:p-9 text-[#0E2737] flex flex-col justify-between shadow-[0_8px_28px_rgba(6,40,55,0.14)] hover:border-[#00D9D0] hover:shadow-[0_0_10px_rgba(0,217,208,0.32),0_0_24px_rgba(0,217,208,0.20),0_8px_28px_rgba(6,40,55,0.14)] relative overflow-hidden group transition-[border-color,box-shadow] duration-300 ease-in-out">
+          <div className="lg:col-span-6 bg-[#EAF6FF] border border-[#BCE1F5] rounded-[22px] p-6 sm:p-8 lg:p-9 text-[#1A2742] flex flex-col justify-between shadow-[0_8px_28px_rgba(15,26,46,0.14)] hover:border-[#00D9D0] hover:shadow-[0_0_10px_rgba(0,217,208,0.32),0_0_24px_rgba(0,217,208,0.20),0_8px_28px_rgba(15,26,46,0.14)] relative overflow-hidden group transition-[border-color,box-shadow] duration-300 ease-in-out">
             {/* Subtle internal gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#EAF6FF]/40 to-[#D8EDFC]/60 pointer-events-none" />
 
@@ -313,19 +315,19 @@ export default function Products() {
                   {/* Icon/Badge: Soft circular ice-blue/cyan treatment */}
                   <div className="w-14 h-14 rounded-full bg-[#D4EDFC] p-1.5 flex items-center justify-center mb-5 shadow-2xs transition-all duration-300 ease-in-out group-hover:shadow-[0_0_14px_rgba(0,217,208,0.35)]">
                     <div className="w-full h-full rounded-full bg-[#BEE5FA] p-1.5 flex items-center justify-center">
-                      <div className="w-full h-full rounded-full bg-[#00D9D0] flex items-center justify-center text-[#062837] shadow-xs">
-                        <ShieldCheck className="w-5 h-5 text-[#082C3D]" />
+                      <div className="w-full h-full rounded-full bg-[#00D9D0] flex items-center justify-center text-[#0C1828] shadow-xs">
+                        <ShieldCheck className="w-5 h-5 text-[#131F35]" />
                       </div>
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl sm:text-[28px] font-extrabold text-[#0E2737] mb-3 tracking-tight">
+                  <h3 className="text-2xl sm:text-[28px] font-extrabold text-[#1A2742] mb-3 tracking-tight">
                     SyWatch
                   </h3>
 
                   {/* Description */}
-                  <p className="text-[14px] sm:text-[14.5px] leading-relaxed text-[#2C5263] font-normal mb-6">
+                  <p className="text-[14px] sm:text-[14.5px] leading-relaxed text-[#3D5070] font-normal mb-6">
                     An on-premises infrastructure monitoring platform built specifically for Oracle FLEXCUBE (FCUBS) environments. SyWatch gives operations teams real-time visibility into database health, transaction throughput, and system alerts — without routing sensitive banking data through the cloud.
                   </p>
                 </div>
@@ -370,18 +372,18 @@ export default function Products() {
                       {/* Base shadow */}
                       <ellipse cx="14" cy="48" rx="14" ry="5.5" fill="#99D3F3" opacity="0.8" />
                       {/* Cylinder 1 (Bottom) */}
-                      <path d="M 0,34 L 0,44 C 0,48 28,48 28,44 L 28,34 Z" fill="#0C2F40" />
-                      <ellipse cx="14" cy="34" rx="14" ry="5.5" fill="#14465E" />
+                      <path d="M 0,34 L 0,44 C 0,48 28,48 28,44 L 28,34 Z" fill="#16233A" />
+                      <ellipse cx="14" cy="34" rx="14" ry="5.5" fill="#243552" />
                       <circle cx="9" cy="40" r="1.5" fill="#00D9D0" />
                       <circle cx="16" cy="40" r="1.5" fill="#00D9D0" />
                       {/* Cylinder 2 (Middle) */}
-                      <path d="M 0,20 L 0,30 C 0,34 28,34 28,30 L 28,20 Z" fill="#0C2F40" />
-                      <ellipse cx="14" cy="20" rx="14" ry="5.5" fill="#14465E" />
+                      <path d="M 0,20 L 0,30 C 0,34 28,34 28,30 L 28,20 Z" fill="#16233A" />
+                      <ellipse cx="14" cy="20" rx="14" ry="5.5" fill="#243552" />
                       <circle cx="9" cy="26" r="1.5" fill="#00D9D0" />
                       <circle cx="16" cy="26" r="1.5" fill="#00D9D0" />
                       {/* Cylinder 3 (Top) */}
-                      <path d="M 0,6 L 0,16 C 0,20 28,20 28,16 L 28,6 Z" fill="#0C2F40" />
-                      <ellipse cx="14" cy="6" rx="14" ry="5.5" fill="#1D5672" />
+                      <path d="M 0,6 L 0,16 C 0,20 28,20 28,16 L 28,6 Z" fill="#16233A" />
+                      <ellipse cx="14" cy="6" rx="14" ry="5.5" fill="#2E4266" />
                       <circle cx="9" cy="12" r="1.5" fill="#00D9D0" />
                       <circle cx="16" cy="12" r="1.5" fill="#00D9D0" />
                     </g>
@@ -391,18 +393,18 @@ export default function Products() {
                       {/* Base shadow */}
                       <ellipse cx="15" cy="54" rx="15" ry="6" fill="#99D3F3" opacity="0.8" />
                       {/* Cylinder 1 (Bottom) */}
-                      <path d="M 0,40 L 0,50 C 0,54 30,54 30,50 L 30,40 Z" fill="#0C2F40" />
-                      <ellipse cx="15" cy="40" rx="15" ry="6" fill="#14465E" />
+                      <path d="M 0,40 L 0,50 C 0,54 30,54 30,50 L 30,40 Z" fill="#16233A" />
+                      <ellipse cx="15" cy="40" rx="15" ry="6" fill="#243552" />
                       <circle cx="10" cy="46" r="1.5" fill="#00D9D0" />
                       <circle cx="18" cy="46" r="1.5" fill="#00D9D0" />
                       {/* Cylinder 2 (Middle) */}
-                      <path d="M 0,26 L 0,36 C 0,40 30,40 30,36 L 30,26 Z" fill="#0C2F40" />
-                      <ellipse cx="15" cy="26" rx="15" ry="6" fill="#14465E" />
+                      <path d="M 0,26 L 0,36 C 0,40 30,40 30,36 L 30,26 Z" fill="#16233A" />
+                      <ellipse cx="15" cy="26" rx="15" ry="6" fill="#243552" />
                       <circle cx="10" cy="32" r="1.5" fill="#00D9D0" />
                       <circle cx="18" cy="32" r="1.5" fill="#00D9D0" />
                       {/* Cylinder 3 (Top) */}
-                      <path d="M 0,12 L 0,22 C 0,26 30,26 30,22 L 30,12 Z" fill="#0C2F40" />
-                      <ellipse cx="15" cy="12" rx="15" ry="6" fill="#1D5672" />
+                      <path d="M 0,12 L 0,22 C 0,26 30,26 30,22 L 30,12 Z" fill="#16233A" />
+                      <ellipse cx="15" cy="12" rx="15" ry="6" fill="#2E4266" />
                       <circle cx="10" cy="18" r="1.5" fill="#00D9D0" />
                       <circle cx="18" cy="18" r="1.5" fill="#00D9D0" />
                     </g>
@@ -410,8 +412,8 @@ export default function Products() {
                     {/* Center 3D Isometric Monitoring Display Screen */}
                     <g transform="translate(68, 32)">
                       {/* Monitor Stand */}
-                      <path d="M 45,95 L 57,95 L 61,114 L 41,114 Z" fill="#0D3244" />
-                      <ellipse cx="51" cy="114" rx="20" ry="5" fill="#072230" />
+                      <path d="M 45,95 L 57,95 L 61,114 L 41,114 Z" fill="#16233A" />
+                      <ellipse cx="51" cy="114" rx="20" ry="5" fill="#0C1828" />
 
                       {/* Main Display Body */}
                       <rect
@@ -420,7 +422,7 @@ export default function Products() {
                         width="102"
                         height="96"
                         rx="7"
-                        fill="#072230"
+                        fill="#0C1828"
                         stroke="#00D9D0"
                         strokeWidth="1.5"
                       />
@@ -432,7 +434,7 @@ export default function Products() {
                         width="92"
                         height="86"
                         rx="4"
-                        fill="#0B2B3C"
+                        fill="#131F35"
                       />
 
                       {/* Top Bar on Screen */}
@@ -443,7 +445,7 @@ export default function Products() {
 
                       {/* Left Side: System Metrics & Mini Bar Chart */}
                       <rect x="10" y="24" width="22" height="2" rx="1" fill="#00D9D0" opacity="0.8" />
-                      <rect x="10" y="28" width="16" height="1.5" rx="0.7" fill="#78AABF" />
+                      <rect x="10" y="28" width="16" height="1.5" rx="0.7" fill="#7F92AD" />
 
                       {/* Mini Bar Chart Bars */}
                       <rect x="10" y="44" width="3.5" height="12" rx="0.5" fill="#00D9D0" />
@@ -506,84 +508,18 @@ export default function Products() {
             </div>
           </div>
 
-          {/* --------------------------------------------------------------------- */}
-          {/* RIGHT CARD — MORE PRODUCTS COMING SOON (~42% width: lg:col-span-5) */}
-          {/* --------------------------------------------------------------------- */}
-          <div className="lg:col-span-5 bg-[#EAF6FF] border border-[#BCE1F5] rounded-[22px] p-6 sm:p-8 lg:p-9 text-[#0E2737] flex flex-col justify-between shadow-[0_8px_28px_rgba(6,40,55,0.14)] hover:border-[#00D9D0] hover:shadow-[0_0_10px_rgba(0,217,208,0.32),0_0_24px_rgba(0,217,208,0.20),0_8px_28px_rgba(6,40,55,0.14)] relative overflow-hidden group transition-[border-color,box-shadow] duration-300 ease-in-out">
-            {/* Subtle internal gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#EAF6FF]/30 to-[#DCEEFB]/60 pointer-events-none" />
+          {/* SYNOTIFY */}
+          <SyNotifyCard className="lg:col-span-6" />
 
-            {/* Orbit decoration sweeping out towards the right edge */}
-            <svg
-              className="absolute right-[-40px] top-1/2 -translate-y-1/2 w-[240px] h-[240px] pointer-events-none select-none opacity-45"
-              viewBox="0 0 240 240"
-              fill="none"
-            >
-              <circle
-                cx="160"
-                cy="120"
-                r="105"
-                stroke="#00D9D0"
-                strokeWidth="1"
-                strokeDasharray="4 4"
-              />
-              <circle
-                cx="160"
-                cy="120"
-                r="75"
-                stroke="#00D9D0"
-                strokeWidth="1.2"
-              />
-              <circle cx="65" cy="85" r="3.5" fill="#00D9D0" />
-              <circle cx="88" cy="145" r="3" fill="#00D9D0" />
-            </svg>
-
-            {/* Top Row: Icon + Arrow Right indicator */}
-            <div className="flex items-center justify-between relative z-10 mb-5">
-              {/* Icon/Badge: circular cyan/orange tech icon treatment */}
-              <div className="w-14 h-14 rounded-full bg-[#D4EDFC] p-1.5 flex items-center justify-center shadow-2xs transition-all duration-300 ease-in-out group-hover:shadow-[0_0_14px_rgba(0,217,208,0.35)]">
-                <div className="w-full h-full rounded-full bg-[#BEE5FA] p-1.5 flex items-center justify-center">
-                  <div className="w-full h-full rounded-full bg-[#00D9D0] flex items-center justify-center text-[#062837] shadow-xs">
-                    <Cpu className="w-5 h-5 text-[#082C3D]" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Arrow Button on the edge as seen in reference */}
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#00D9D0] bg-white flex items-center justify-center text-[#00D9D0] shadow-xs hover:bg-[#00D9D0] hover:text-white hover:shadow-[0_0_12px_rgba(0,217,208,0.35)] transition-all duration-300 ease-in-out cursor-pointer">
-                <ArrowRight className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
-              </div>
-            </div>
-
-            {/* Content Area */}
-            <div className="relative z-10 flex-1 flex flex-col justify-between">
-              <div>
-                {/* Title */}
-                <h3 className="text-2xl sm:text-[26px] font-extrabold text-[#0E2737] mb-3 tracking-tight">
-                  More Products Coming Soon
-                </h3>
-
-                {/* Description */}
-                <p className="text-[14px] sm:text-[14.5px] leading-relaxed text-[#2C5263] font-normal mb-6">
-                  Syfinor is actively developing additional products targeting core banking operations, integration infrastructure, and intelligent automation for financial institutions.
-                </p>
-              </div>
-
-              {/* Button: IN DEVELOPMENT */}
-              <div>
-                <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-[#FF6B35] bg-white/80 text-[#FF6B35] text-[12px] font-bold tracking-wider uppercase shadow-2xs hover:bg-[#FF6B35] hover:text-white hover:shadow-[0_0_12px_rgba(255,107,53,0.35)] transition-all duration-300 ease-in-out select-none cursor-pointer">
-                  IN DEVELOPMENT
-                </span>
-              </div>
-            </div>
-          </div>
+          {/* MORE PRODUCTS COMING SOON — expands to show products in development */}
+          <ComingSoonProducts className="lg:col-span-12" />
         </div>
 
         {/* ========================================================================= */}
         {/* 5. INDUSTRIES WE SERVE (Horizontal Compact Row) */}
         {/* ========================================================================= */}
         <div className="pt-2 sm:pt-4">
-          <div className="flex flex-wrap items-center gap-y-3 gap-x-4 sm:gap-x-6 text-[13px] sm:text-[13.5px] text-[#C2DFEC]">
+          <div className="flex flex-wrap items-center gap-y-3 gap-x-4 sm:gap-x-6 text-[13px] sm:text-[13.5px] text-[#C3CCD9]">
             {/* Left Header */}
             <div className="flex items-center gap-2.5 flex-shrink-0">
               <Landmark className="w-4.5 h-4.5 text-[#00D9D0]" />
@@ -614,13 +550,13 @@ export default function Products() {
         </div>
 
         {/* Thin Divider Between Industries and Categories */}
-        <div className="w-full h-[1px] bg-[#144254] my-5 sm:my-6" />
+        <div className="w-full h-[1px] bg-[#243552] my-5 sm:my-6" />
 
         {/* ========================================================================= */}
         {/* 6. OUR PRODUCT CATEGORIES (Horizontal Compact Row) */}
         {/* ========================================================================= */}
         <div className="pb-2">
-          <div className="flex flex-wrap items-center gap-y-3 gap-x-4 sm:gap-x-6 text-[13px] sm:text-[13.5px] text-[#C2DFEC]">
+          <div className="flex flex-wrap items-center gap-y-3 gap-x-4 sm:gap-x-6 text-[13px] sm:text-[13.5px] text-[#C3CCD9]">
             {/* Left Header */}
             <div className="flex items-center gap-2.5 flex-shrink-0">
               <LayoutGrid className="w-4.5 h-4.5 text-[#00D9D0]" />

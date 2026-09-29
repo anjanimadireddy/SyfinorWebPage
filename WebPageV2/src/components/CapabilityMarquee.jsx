@@ -143,7 +143,7 @@ export default function CapabilityMarquee() {
                 <div key={`group1-${idx}`} className="flex items-center flex-shrink-0">
                   <div className="flex items-center space-x-2.5">
                     <Icon className="w-4 h-4 text-[#00D9D0] flex-shrink-0 opacity-95" />
-                    <span className="text-[13.5px] sm:text-[14.5px] font-medium text-[#C3E4F1] whitespace-nowrap tracking-wide">
+                    <span className="text-[13.5px] sm:text-[14.5px] font-medium text-[#C6D0DD] whitespace-nowrap tracking-wide">
                       {item.text}
                     </span>
                   </div>
@@ -161,7 +161,7 @@ export default function CapabilityMarquee() {
                 <div key={`group2-${idx}`} className="flex items-center flex-shrink-0">
                   <div className="flex items-center space-x-2.5">
                     <Icon className="w-4 h-4 text-[#00D9D0] flex-shrink-0 opacity-95" />
-                    <span className="text-[13.5px] sm:text-[14.5px] font-medium text-[#C3E4F1] whitespace-nowrap tracking-wide">
+                    <span className="text-[13.5px] sm:text-[14.5px] font-medium text-[#C6D0DD] whitespace-nowrap tracking-wide">
                       {item.text}
                     </span>
                   </div>

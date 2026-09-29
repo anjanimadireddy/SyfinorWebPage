@@ -14,7 +14,7 @@ import WhatsAppWidget from './components/WhatsAppWidget.jsx';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-[#0D3240] flex flex-col selection:bg-[#00B89F] selection:text-white font-sans antialiased relative">
+    <div className="min-h-screen bg-white text-[#1A2742] flex flex-col selection:bg-[#00B89F] selection:text-white font-sans antialiased relative overflow-x-clip">
       {/* 1. Header */}
       <Header />
 

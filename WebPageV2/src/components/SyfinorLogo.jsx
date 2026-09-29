@@ -22,7 +22,7 @@ export default function SyfinorLogo({ light = false, className = '' }) {
 
       <span
         className={`text-[21px] font-extrabold tracking-tight font-sans transition-colors ${
-          light ? 'text-white' : 'text-[#0D3240]'
+          light ? 'text-white' : 'text-[#1A2742]'
         }`}
       >
         Syfinor
