@@ -19,6 +19,61 @@ import {
 const WEB3FORMS_ACCESS_KEY = '505fafcb-8133-4e82-87a5-463e8c064825';
 const CONTACT_FORM_ENDPOINT = 'https://api.web3forms.com/submit';
 
+// Country dialling codes for the mobile number field (India first, then regions Syfinor serves).
+const COUNTRY_CODES = [
+  { iso: 'IN', name: 'India', code: '+91' },
+  { iso: 'AE', name: 'UAE', code: '+971' },
+  { iso: 'SA', name: 'Saudi Arabia', code: '+966' },
+  { iso: 'QA', name: 'Qatar', code: '+974' },
+  { iso: 'OM', name: 'Oman', code: '+968' },
+  { iso: 'KW', name: 'Kuwait', code: '+965' },
+  { iso: 'BH', name: 'Bahrain', code: '+973' },
+  { iso: 'ZA', name: 'South Africa', code: '+27' },
+  { iso: 'LS', name: 'Lesotho', code: '+266' },
+  { iso: 'KE', name: 'Kenya', code: '+254' },
+  { iso: 'NG', name: 'Nigeria', code: '+234' },
+  { iso: 'GH', name: 'Ghana', code: '+233' },
+  { iso: 'TZ', name: 'Tanzania', code: '+255' },
+  { iso: 'UG', name: 'Uganda', code: '+256' },
+  { iso: 'ZM', name: 'Zambia', code: '+260' },
+  { iso: 'ZW', name: 'Zimbabwe', code: '+263' },
+  { iso: 'BW', name: 'Botswana', code: '+267' },
+  { iso: 'NA', name: 'Namibia', code: '+264' },
+  { iso: 'SZ', name: 'Eswatini', code: '+268' },
+  { iso: 'MZ', name: 'Mozambique', code: '+258' },
+  { iso: 'RW', name: 'Rwanda', code: '+250' },
+  { iso: 'ET', name: 'Ethiopia', code: '+251' },
+  { iso: 'EG', name: 'Egypt', code: '+20' },
+  { iso: 'LK', name: 'Sri Lanka', code: '+94' },
+  { iso: 'BD', name: 'Bangladesh', code: '+880' },
+  { iso: 'NP', name: 'Nepal', code: '+977' },
+  { iso: 'SG', name: 'Singapore', code: '+65' },
+  { iso: 'MY', name: 'Malaysia', code: '+60' },
+  { iso: 'ID', name: 'Indonesia', code: '+62' },
+  { iso: 'PH', name: 'Philippines', code: '+63' },
+  { iso: 'TH', name: 'Thailand', code: '+66' },
+  { iso: 'VN', name: 'Vietnam', code: '+84' },
+  { iso: 'MX', name: 'Mexico', code: '+52' },
+  { iso: 'CO', name: 'Colombia', code: '+57' },
+  { iso: 'PE', name: 'Peru', code: '+51' },
+  { iso: 'CL', name: 'Chile', code: '+56' },
+  { iso: 'AR', name: 'Argentina', code: '+54' },
+  { iso: 'BR', name: 'Brazil', code: '+55' },
+  { iso: 'EC', name: 'Ecuador', code: '+593' },
+  { iso: 'PA', name: 'Panama', code: '+507' },
+  { iso: 'CR', name: 'Costa Rica', code: '+506' },
+  { iso: 'GT', name: 'Guatemala', code: '+502' },
+  { iso: 'DO', name: 'Dominican Republic', code: '+1' },
+  { iso: 'US', name: 'USA / Canada', code: '+1' },
+  { iso: 'GB', name: 'United Kingdom', code: '+44' },
+  { iso: 'DE', name: 'Germany', code: '+49' },
+  { iso: 'FR', name: 'France', code: '+33' },
+  { iso: 'NL', name: 'Netherlands', code: '+31' },
+  { iso: 'CH', name: 'Switzerland', code: '+41' },
+  { iso: 'AU', name: 'Australia', code: '+61' },
+  { iso: 'NZ', name: 'New Zealand', code: '+64' },
+];
+
 const SYFINOR_LINKEDIN_URL = 'https://www.linkedin.com/company/syfinor-technologies/posts/?feedView=all';
 
 export default function ReachUs() {
@@ -26,6 +81,8 @@ export default function ReachUs() {
     firstName: '',
     lastName: '',
     email: '',
+    countryIso: 'IN',
+    mobile: '',
     organization: '',
     enquiryType: '',
     message: '',
@@ -47,6 +104,8 @@ export default function ReachUs() {
     setSending(true);
     setError('');
     const fullName = `${formData.firstName} ${formData.lastName}`.trim();
+    const country = COUNTRY_CODES.find((c) => c.iso === formData.countryIso) || COUNTRY_CODES[0];
+    const mobileFull = `${country.code} ${formData.mobile.replace(/[^\d]/g, '')}`;
     try {
       const res = await fetch(CONTACT_FORM_ENDPOINT, {
         method: 'POST',
@@ -58,6 +117,7 @@ export default function ReachUs() {
           replyto: formData.email,
           Name: fullName,
           Email: formData.email,
+          Mobile: `${mobileFull} (${country.name})`,
           Organization: formData.organization || '-',
           'Enquiry Type': formData.enquiryType || 'General',
           Message: formData.message || '-',
@@ -68,7 +128,7 @@ export default function ReachUs() {
         throw new Error(data.message || `HTTP ${res.status}`);
       }
       setSubmitted(true);
-      setFormData({ firstName: '', lastName: '', email: '', organization: '', enquiryType: '', message: '' });
+      setFormData({ firstName: '', lastName: '', email: '', countryIso: 'IN', mobile: '', organization: '', enquiryType: '', message: '' });
       setTimeout(() => setSubmitted(false), 8000);
     } catch (err) {
       console.error('Contact form failed:', err);
@@ -288,6 +348,45 @@ export default function ReachUs() {
                         }
                         className="w-full bg-white border border-[#BFDFEE] rounded-lg pl-9.5 pr-3.5 py-2.5 text-[14px] text-[#1A2742] placeholder-slate-400 focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200"
                       />
+                    </div>
+                  </div>
+
+                  {/* Mobile Number with country code */}
+                  <div>
+                    <label className="block text-[12.5px] font-semibold text-[#1A2742] mb-1.5">
+                      Mobile Number
+                    </label>
+                    <div className="flex gap-2">
+                      <div className="relative w-[46%] sm:w-[38%] flex-shrink-0">
+                        <select
+                          aria-label="Country code"
+                          value={formData.countryIso}
+                          onChange={(e) => setFormData({ ...formData, countryIso: e.target.value })}
+                          className="w-full bg-white border border-[#BFDFEE] rounded-lg pl-3 pr-8 py-2.5 text-[14px] text-[#1A2742] focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200 appearance-none cursor-pointer"
+                        >
+                          {COUNTRY_CODES.map((c) => (
+                            <option key={c.iso} value={c.iso}>
+                              {c.code} {c.name}
+                            </option>
+                          ))}
+                        </select>
+                        <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+                      </div>
+                      <div className="relative flex-1">
+                        <Phone className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                        <input
+                          type="tel"
+                          required
+                          inputMode="tel"
+                          autoComplete="tel-national"
+                          placeholder="98765 43210"
+                          pattern="[0-9 \-]{6,16}"
+                          title="Enter 6–15 digits, without the country code"
+                          value={formData.mobile}
+                          onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
+                          className="w-full bg-white border border-[#BFDFEE] rounded-lg pl-9.5 pr-3.5 py-2.5 text-[14px] text-[#1A2742] placeholder-slate-400 focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200"
+                        />
+                      </div>
                     </div>
                   </div>
 

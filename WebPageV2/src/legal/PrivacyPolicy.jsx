@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
         <p>We only collect personal data that you choose to give us, or that is technically necessary to show you this website:</p>
         <List
           items={[
-            <><strong>Contact form:</strong> first and last name, work email address, organisation, enquiry type and the message you write.</>,
+            <><strong>Contact form:</strong> first and last name, work email address, mobile number (with country code), organisation, enquiry type and the message you write.</>,
             <><strong>WhatsApp chat:</strong> if you use the WhatsApp button, your phone number, profile name and the messages you send us through WhatsApp.</>,
             <><strong>Email and phone:</strong> any details you share when you email or call us directly.</>,
             <><strong>Technical data:</strong> like any website, your browser sends your IP address and basic device/browser information when pages, fonts and images are loaded. We do not use this to identify you.</>,
