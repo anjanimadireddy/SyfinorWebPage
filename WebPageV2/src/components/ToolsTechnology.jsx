@@ -24,11 +24,11 @@ export default function ToolsTechnology() {
     },
     {
       id: 'sanction',
-      title: 'Payment Sanction Screening',
+      title: 'Sanction Screening Services',
       category: 'Compliance',
       icon: ShieldAlert,
       description:
-        'Architecture and integration connecting Oracle Banking Payments (OBPM) with AML and sanction screening engines. Regulatory compliance for cross-border transactions with configurable rules and audit-ready reporting.',
+        'End-to-end sanction screening for both payments and customers — real-time screening of cross-border and domestic transactions from Oracle Banking Payments (OBPM), plus screening of customers against sanctions and watch lists. Integrated with AML and sanction screening engines, with configurable rules and audit-ready reporting.',
       tag: 'COMPLIANCE',
     },
     {

@@ -14,6 +14,10 @@ import {
 } from 'lucide-react';
 
 // Official Syfinor Technologies company URLs
+// Contact form delivery (FormSubmit.co AJAX endpoint -> info@syfinor.com).
+// After activation, the address can be replaced by the random alias FormSubmit emails you.
+const CONTACT_FORM_ENDPOINT = 'https://formsubmit.co/ajax/info@syfinor.com';
+
 const SYFINOR_LINKEDIN_URL = 'https://www.linkedin.com/company/syfinor-technologies/posts/?feedView=all';
 
 export default function ReachUs() {
@@ -27,22 +31,50 @@ export default function ReachUs() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
+  const [honey, setHoney] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.email || !formData.firstName) return;
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        organization: '',
-        enquiryType: '',
-        message: '',
+    if (!formData.email || !formData.firstName || sending) return;
+    // Honeypot: real visitors never fill this hidden field; bots usually do.
+    if (honey) {
+      setSubmitted(true);
+      return;
+    }
+    setSending(true);
+    setError('');
+    const fullName = `${formData.firstName} ${formData.lastName}`.trim();
+    try {
+      const res = await fetch(CONTACT_FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          Name: fullName,
+          Email: formData.email,
+          Organization: formData.organization || '-',
+          'Enquiry Type': formData.enquiryType || 'General',
+          Message: formData.message || '-',
+          _replyto: formData.email,
+          _subject: `Website enquiry: ${formData.enquiryType || 'General'} - ${fullName}`,
+          _template: 'table',
+          _captcha: 'false',
+        }),
       });
-    }, 4000);
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || String(data.success) !== 'true') {
+        throw new Error(data.message || `HTTP ${res.status}`);
+      }
+      setSubmitted(true);
+      setFormData({ firstName: '', lastName: '', email: '', organization: '', enquiryType: '', message: '' });
+      setTimeout(() => setSubmitted(false), 8000);
+    } catch (err) {
+      console.error('Contact form failed:', err);
+      setError('Sorry, your message could not be sent right now. Please email us at info@syfinor.com or call +91 81067 52927.');
+    } finally {
+      setSending(false);
+    }
   };
 
   const contactCards = [
@@ -185,6 +217,17 @@ export default function ReachUs() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {/* Honeypot field (hidden from people) */}
+                  <input
+                    type="text"
+                    name="_honey"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={honey}
+                    onChange={(e) => setHoney(e.target.value)}
+                    className="hidden"
+                    aria-hidden="true"
+                  />
                   {/* First Name & Last Name */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
@@ -275,24 +318,13 @@ export default function ReachUs() {
                         className="w-full bg-white border border-[#BFDFEE] rounded-lg px-3.5 py-2.5 text-[14px] text-[#1A2742] focus:outline-none focus:border-[#00D9D0] focus:ring-1 focus:ring-[#00D9D0] focus:shadow-[0_0_8px_rgba(0,217,208,0.25)] transition-all duration-200 appearance-none cursor-pointer"
                       >
                         <option value="">Select an option...</option>
-                        <option value="Oracle FLEXCUBE Implementation">
-                          Oracle FLEXCUBE Implementation
-                        </option>
-                        <option value="SyWatch Infrastructure Monitoring">
-                          SyWatch Infrastructure Monitoring
-                        </option>
-                        <option value="Payment Sanction Screening (OBPM)">
-                          Payment Sanction Screening (OBPM)
-                        </option>
-                        <option value="Managed Service Support">
-                          Managed Service Support
-                        </option>
-                        <option value="Training & Knowledge Transfer">
-                          Training & Knowledge Transfer
-                        </option>
-                        <option value="General Strategic Inquiry">
-                          General Strategic Inquiry
-                        </option>
+                        <option value="Oracle FLEXCUBE Customization">Oracle FLEXCUBE Customization</option>
+                        <option value="Oracle FLEXCUBE Managed Services">Oracle FLEXCUBE Managed Services</option>
+                        <option value="Oracle FLEXCUBE Training">Oracle FLEXCUBE Training</option>
+                        <option value="Oracle FLEXCUBE Implementation">Oracle FLEXCUBE Implementation</option>
+                        <option value="Oracle FLEXCUBE Resource Orchestration">Oracle FLEXCUBE Resource Orchestration</option>
+                        <option value="In-House Products (SyWatch, SyNotify, SyFiS)">In-House Products (SyWatch, SyNotify, SyFiS)</option>
+                        <option value="Sanction Screening Services">Sanction Screening Services</option>
                       </select>
                       <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                     </div>
@@ -305,6 +337,7 @@ export default function ReachUs() {
                     </label>
                     <textarea
                       rows={4}
+                      required
                       placeholder="Tell us how we can help..."
                       value={formData.message}
                       onChange={(e) =>
@@ -314,13 +347,20 @@ export default function ReachUs() {
                     />
                   </div>
 
+                  {error && (
+                    <p role="alert" className="text-[13px] text-[#C2410C] bg-[#FFF1EB] border border-[#FFD2BF] rounded-lg px-3.5 py-2.5">
+                      {error}
+                    </p>
+                  )}
+
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full mt-2 py-3 px-6 rounded-lg bg-[#00A39B] hover:bg-[#008f88] text-white font-bold text-[14px] flex items-center justify-center gap-2 shadow-sm hover:shadow-[0_0_16px_rgba(0,217,208,0.40)] hover:-translate-y-0.5 active:scale-[0.99] transition-all duration-300 ease-in-out cursor-pointer"
+                    disabled={sending}
+                    className="w-full mt-2 py-3 px-6 rounded-lg bg-[#00A39B] hover:bg-[#008f88] text-white font-bold text-[14px] flex items-center justify-center gap-2 shadow-sm hover:shadow-[0_0_16px_rgba(0,217,208,0.40)] hover:-translate-y-0.5 active:scale-[0.99] transition-all duration-300 ease-in-out cursor-pointer disabled:opacity-70 disabled:cursor-wait disabled:hover:translate-y-0"
                   >
                     <Send className="w-4 h-4" />
-                    <span>Send Message →</span>
+                    <span>{sending ? 'Sending…' : 'Send Message →'}</span>
                   </button>
                 </form>
               )}
